@@ -1,0 +1,77 @@
+{
+  "checks" : [
+    {
+      "bytes" : 159875,
+      "dialog" : true,
+      "dialogFits" : true,
+      "fitsWidth" : true,
+      "heading" : "Share feedback",
+      "lang" : "en",
+      "screenshot" : "en-light-900.png",
+      "text" : "Share feedbackHelp improve the guardian workflow with quick UX notes.NameEmailExperienceExcellentGoodNeeds workFeedbackCancelSubmit",
+      "theme" : "light",
+      "width" : 900
+    },
+    {
+      "bytes" : 121154,
+      "dialog" : true,
+      "dialogFits" : true,
+      "fitsWidth" : true,
+      "heading" : "Share feedback",
+      "lang" : "en",
+      "screenshot" : "en-dark-390.png",
+      "text" : "Share feedbackHelp improve the guardian workflow with quick UX notes.NameEmailExperienceExcellentGoodNeeds workFeedbackCancelSubmit",
+      "theme" : "dark",
+      "width" : 390
+    },
+    {
+      "bytes" : 175287,
+      "dialog" : true,
+      "dialogFits" : true,
+      "fitsWidth" : true,
+      "heading" : "Comparte tus comentarios",
+      "lang" : "es",
+      "screenshot" : "es-light-900.png",
+      "text" : "Comparte tus comentariosAyuda a mejorar el flujo de trabajo de los guardianes con comentarios sobre la experiencia de uso.NombreCorreo electrónicoExperienciaExcelenteBuenaNecesita mejorarComentariosCancelarEnviar",
+      "theme" : "light",
+      "width" : 900
+    },
+    {
+      "bytes" : 137507,
+      "dialog" : true,
+      "dialogFits" : true,
+      "fitsWidth" : true,
+      "heading" : "Comparte tus comentarios",
+      "lang" : "es",
+      "screenshot" : "es-dark-390.png",
+      "text" : "Comparte tus comentariosAyuda a mejorar el flujo de trabajo de los guardianes con comentarios sobre la experiencia de uso.NombreCorreo electrónicoExperienciaExcelenteBuenaNecesita mejorarComentariosCancelarEnviar",
+      "theme" : "dark",
+      "width" : 390
+    },
+    {
+      "bytes" : 137147,
+      "dialog" : true,
+      "dialogFits" : true,
+      "fitsWidth" : true,
+      "heading" : "Partagez votre avis",
+      "lang" : "fr",
+      "screenshot" : "fr-light-390.png",
+      "text" : "Partagez votre avisAidez à améliorer le parcours des gardiens en partageant vos remarques sur l’expérience utilisateur.NomAdresse e-mailExpérienceExcellenteBonneÀ améliorerAvisAnnulerEnvoyer",
+      "theme" : "light",
+      "width" : 390
+    },
+    {
+      "bytes" : 156633,
+      "dialog" : true,
+      "dialogFits" : true,
+      "fitsWidth" : true,
+      "heading" : "Partagez votre avis",
+      "lang" : "fr",
+      "screenshot" : "fr-dark-900.png",
+      "text" : "Partagez votre avisAidez à améliorer le parcours des gardiens en partageant vos remarques sur l’expérience utilisateur.NomAdresse e-mailExpérienceExcellenteBonneÀ améliorerAvisAnnulerEnvoyer",
+      "theme" : "dark",
+      "width" : 900
+    }
+  ],
+  "engine" : "Native WKWebView with nonpersistent data store; local component fixture only"
+}

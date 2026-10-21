@@ -1,0 +1,1171 @@
+FAIL src/components/__tests__/FeedbackModal.i18n.test.tsx (6.118 s)
+  FeedbackModal translations
+    ✓ translates controls and accessible labels in en (71 ms)
+    ✕ translates controls and accessible labels in es (5 ms)
+    ✕ translates controls and accessible labels in fr (3 ms)
+    ✓ keeps canonical API rating values while showing en labels (36 ms)
+    ✕ keeps canonical API rating values while showing es labels (3 ms)
+    ✕ keeps canonical API rating values while showing fr labels (3 ms)
+    ✕ switches languages without losing form content or rating (24 ms)
+    ✕ localizes server error Feedback message is required. and updates it on language change (2 ms)
+    ✕ localizes server error Enter a valid email address. and updates it on language change (2 ms)
+    ✕ localizes server error Feedback submission failed. and updates it on language change (2 ms)
+    ✕ localizes server error Invalid feedback payload. and updates it on language change (2 ms)
+    ✕ localizes server error Unrecognized server message and updates it on language change (2 ms)
+    ✕ translates the disabled submitting state and eventual success (29 ms)
+
+  ● FeedbackModal translations › translates controls and accessible labels in es
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Enviar comentarios"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </body>
+
+      112 |   const labels = copy.find((item) => item.language === language);
+      113 |   if (!labels) throw new Error('Unsupported fixture language');
+    > 114 |   fireEvent.click(screen.getByRole('button', { name: labels.open }));
+          |                          ^
+      115 |   return i18n;
+      116 | }
+      117 |
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:114:26)
+      at src/components/__tests__/FeedbackModal.i18n.test.tsx:128:5
+
+  ● FeedbackModal translations › translates controls and accessible labels in fr
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Envoyer un avis"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </body>
+
+      112 |   const labels = copy.find((item) => item.language === language);
+      113 |   if (!labels) throw new Error('Unsupported fixture language');
+    > 114 |   fireEvent.click(screen.getByRole('button', { name: labels.open }));
+          |                          ^
+      115 |   return i18n;
+      116 | }
+      117 |
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:114:26)
+      at src/components/__tests__/FeedbackModal.i18n.test.tsx:128:5
+
+  ● FeedbackModal translations › keeps canonical API rating values while showing es labels
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Enviar comentarios"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </body>
+
+      112 |   const labels = copy.find((item) => item.language === language);
+      113 |   if (!labels) throw new Error('Unsupported fixture language');
+    > 114 |   fireEvent.click(screen.getByRole('button', { name: labels.open }));
+          |                          ^
+      115 |   return i18n;
+      116 | }
+      117 |
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:114:26)
+      at src/components/__tests__/FeedbackModal.i18n.test.tsx:143:5
+
+  ● FeedbackModal translations › keeps canonical API rating values while showing fr labels
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Envoyer un avis"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </body>
+
+      112 |   const labels = copy.find((item) => item.language === language);
+      113 |   if (!labels) throw new Error('Unsupported fixture language');
+    > 114 |   fireEvent.click(screen.getByRole('button', { name: labels.open }));
+          |                          ^
+      115 |   return i18n;
+      116 | }
+      117 |
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:114:26)
+      at src/components/__tests__/FeedbackModal.i18n.test.tsx:143:5
+
+  ● FeedbackModal translations › switches languages without losing form content or rating
+
+    TestingLibraryElementError: Unable to find a label with the text of: Nombre
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+        <div
+          class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 px-4 py-6"
+        >
+          <div
+            aria-labelledby="feedback-title"
+            aria-modal="true"
+            class="w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl dark:border-slate-700 dark:bg-slate-900"
+            role="dialog"
+          >
+            <div
+              class="mb-4 flex items-start justify-between gap-4"
+            >
+              <div>
+                <h2
+                  class="text-lg font-semibold text-slate-900 dark:text-white"
+                  id="feedback-title"
+                >
+                  Share feedback
+                </h2>
+                <p
+                  class="mt-1 text-sm text-slate-600 dark:text-slate-400"
+                >
+                  Help improve the guardian workflow with quick UX notes.
+                </p>
+              </div>
+              <button
+                aria-label="Close feedback form"
+                class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:hover:bg-slate-800 dark:hover:text-white"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-x h-5 w-5"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 6 6 18"
+                  />
+                  <path
+                    d="m6 6 12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <form
+              class="space-y-4"
+            >
+              <div
+                class="grid grid-cols-1 gap-4 sm:grid-cols-2"
+              >
+                <label
+                  class="block text-sm font-medium text-slate-700 dark:text-slate-200"
+                >
+                  Name
+                  <input
+                    class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                    maxlength="80"
+                    placeholder="Optional"
+                    value="Pat"
+                  />
+                </label>
+                <label
+                  class="block text-sm font-medium text-slate-700 dark:text-slate-200"
+                >
+                  Email
+                  <input
+                    class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                    maxlength="120"
+                    placeholder="Optional"
+                    type="email"
+                    value="pat@example.com"
+                  />
+                </label>
+              </div>
+              <fieldset>
+                <legend
+                  class="mb-2 text-sm font-medium text-slate-700 dark:text-slate-200"
+                >
+                  Experience
+                </legend>
+                <div
+                  class="grid grid-cols-3 gap-2"
+                >
+                  <label
+                    class="flex min-h-10 cursor-pointer items-center justify-center rounded-lg border border-slate-300 px-2 text-center text-sm text-slate-700 has-[:checked]:border-indigo-600 has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-700 dark:border-slate-700 dark:text-slate-200 dark:has-[:checked]:bg-indigo-950"
+                  >
+                    <input
+                      class="sr-only"
+                      name="feedback-rating"
+                      type="radio"
+                      value="Excellent"
+                    />
+                    Excellent
+                  </label>
+                  <label
+                    class="flex min-h-10 cursor-pointer items-center justify-center rounded-lg border border-slate-300 px-2 text-center text-sm text-slate-700 has-[:checked]:border-indigo-600 has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-700 dark:border-slate-700 dark:text-slate-200 dark:has-[:checked]:bg-indigo-950"
+                  >
+                    <input
+                      checked=""
+                      class="sr-only"
+                      name="feedback-rating"
+                      type="radio"
+                      value="Good"
+                    />
+                    Good
+                  </label>
+                  <label
+                    class="flex min-h-10 cursor-pointer items-center justify-center rounded-lg border border-slate-300 px-2 text-center text-sm text-slate-700 has-[:checked]:border-indigo-600 has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-700 dark:border-slate-700 dark:text-slate-200 dark:has-[:checked]:bg-indigo-950"
+                  >
+                    <input
+                      class="sr-only"
+                      name="feedback-rating"
+                      type="radio"
+                      value="Needs work"
+                    />
+                    Needs work
+                  </label>
+                </div>
+              </fieldset>
+              <label
+                class="block text-sm font-medium text-slate-700 dark:text-slate-200"
+              >
+                Feedback
+                <textarea
+                  class="mt-1 w-full resize-none rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                  maxlength="1200"
+                  placeholder="What should be improved?"
+                  required=""
+                  rows="5"
+                >
+                  Make the navigation clearer.
+                </textarea>
+              </label>
+              <div
+                class="flex items-center justify-end gap-3"
+              >
+                <button
+                  class="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+                  type="button"
+                >
+                  Cancel
+                </button>
+                <button
+                  class="inline-flex min-h-10 items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:focus:ring-offset-slate-900"
+                  type="submit"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-send h-4 w-4"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
+                    />
+                    <path
+                      d="m21.854 2.147-10.94 10.939"
+                    />
+                  </svg>
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </body>
+
+      161 |     fireEvent.click(screen.getByRole('radio', { name: en.ratings.needsWork }));
+      162 |     await act(async () => { await i18n.changeLanguage('es'); });
+    > 163 |     expect(screen.getByLabelText(es.name)).toHaveValue('Pat');
+          |                   ^
+      164 |     expect(screen.getByLabelText(es.message)).toHaveValue('Make the navigation clearer.');
+      165 |     expect(screen.getByRole('radio', { name: es.ratings.needsWork })).toBeChecked();
+      166 |     await act(async () => { await i18n.changeLanguage('fr'); });
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at getAllByLabelText (../source/node_modules/@testing-library/dom/dist/queries/label-text.js:111:38)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at Object.getByLabelText (src/components/__tests__/FeedbackModal.i18n.test.tsx:163:19)
+
+  ● FeedbackModal translations › localizes server error Feedback message is required. and updates it on language change
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Enviar comentarios"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </body>
+
+      112 |   const labels = copy.find((item) => item.language === language);
+      113 |   if (!labels) throw new Error('Unsupported fixture language');
+    > 114 |   fireEvent.click(screen.getByRole('button', { name: labels.open }));
+          |                          ^
+      115 |   return i18n;
+      116 | }
+      117 |
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:114:26)
+      at src/components/__tests__/FeedbackModal.i18n.test.tsx:181:18
+
+  ● FeedbackModal translations › localizes server error Enter a valid email address. and updates it on language change
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Enviar comentarios"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </body>
+
+      112 |   const labels = copy.find((item) => item.language === language);
+      113 |   if (!labels) throw new Error('Unsupported fixture language');
+    > 114 |   fireEvent.click(screen.getByRole('button', { name: labels.open }));
+          |                          ^
+      115 |   return i18n;
+      116 | }
+      117 |
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:114:26)
+      at src/components/__tests__/FeedbackModal.i18n.test.tsx:181:18
+
+  ● FeedbackModal translations › localizes server error Feedback submission failed. and updates it on language change
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Enviar comentarios"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </body>
+
+      112 |   const labels = copy.find((item) => item.language === language);
+      113 |   if (!labels) throw new Error('Unsupported fixture language');
+    > 114 |   fireEvent.click(screen.getByRole('button', { name: labels.open }));
+          |                          ^
+      115 |   return i18n;
+      116 | }
+      117 |
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:114:26)
+      at src/components/__tests__/FeedbackModal.i18n.test.tsx:181:18
+
+  ● FeedbackModal translations › localizes server error Invalid feedback payload. and updates it on language change
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Enviar comentarios"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </body>
+
+      112 |   const labels = copy.find((item) => item.language === language);
+      113 |   if (!labels) throw new Error('Unsupported fixture language');
+    > 114 |   fireEvent.click(screen.getByRole('button', { name: labels.open }));
+          |                          ^
+      115 |   return i18n;
+      116 | }
+      117 |
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:114:26)
+      at src/components/__tests__/FeedbackModal.i18n.test.tsx:181:18
+
+  ● FeedbackModal translations › localizes server error Unrecognized server message and updates it on language change
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Enviar comentarios"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </body>
+
+      112 |   const labels = copy.find((item) => item.language === language);
+      113 |   if (!labels) throw new Error('Unsupported fixture language');
+    > 114 |   fireEvent.click(screen.getByRole('button', { name: labels.open }));
+          |                          ^
+      115 |   return i18n;
+      116 | }
+      117 |
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:114:26)
+      at src/components/__tests__/FeedbackModal.i18n.test.tsx:181:18
+
+  ● FeedbackModal translations › translates the disabled submitting state and eventual success
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Enviando"
+
+    Here are the accessible roles:
+
+      button:
+
+      Name "Send feedback":
+      <button
+        aria-label="Send feedback"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+        title="Send feedback"
+        type="button"
+      />
+
+      Name "Close feedback form":
+      <button
+        aria-label="Close feedback form"
+        class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:hover:bg-slate-800 dark:hover:text-white"
+        type="button"
+      />
+
+      Name "Cancel":
+      <button
+        class="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+        type="button"
+      />
+
+      Name "Sending":
+      <button
+        class="inline-flex min-h-10 items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:focus:ring-offset-slate-900"
+        disabled=""
+        type="submit"
+      />
+
+      --------------------------------------------------
+      dialog:
+
+      Name "Share feedback":
+      <div
+        aria-labelledby="feedback-title"
+        aria-modal="true"
+        class="w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl dark:border-slate-700 dark:bg-slate-900"
+        role="dialog"
+      />
+
+      --------------------------------------------------
+      heading:
+
+      Name "Share feedback":
+      <h2
+        class="text-lg font-semibold text-slate-900 dark:text-white"
+        id="feedback-title"
+      />
+
+      --------------------------------------------------
+      paragraph:
+
+      Name "":
+      <p
+        class="mt-1 text-sm text-slate-600 dark:text-slate-400"
+      />
+
+      --------------------------------------------------
+      textbox:
+
+      Name "Name":
+      <input
+        class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+        maxlength="80"
+        placeholder="Optional"
+        value="Pat"
+      />
+
+      Name "Email":
+      <input
+        class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+        maxlength="120"
+        placeholder="Optional"
+        type="email"
+        value="pat@example.com"
+      />
+
+      Name "Feedback":
+      <textarea
+        class="mt-1 w-full resize-none rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+        maxlength="1200"
+        placeholder="What should be improved?"
+        required=""
+        rows="5"
+      />
+
+      --------------------------------------------------
+      group:
+
+      Name "Experience":
+      <fieldset />
+
+      --------------------------------------------------
+      radio:
+
+      Name "Excellent":
+      <input
+        class="sr-only"
+        name="feedback-rating"
+        type="radio"
+        value="Excellent"
+      />
+
+      Name "Good":
+      <input
+        checked=""
+        class="sr-only"
+        name="feedback-rating"
+        type="radio"
+        value="Good"
+      />
+
+      Name "Needs work":
+      <input
+        class="sr-only"
+        name="feedback-rating"
+        type="radio"
+        value="Needs work"
+      />
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <button
+          aria-label="Send feedback"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+          title="Send feedback"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-message-square h-5 w-5"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </button>
+        <div
+          class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 px-4 py-6"
+        >
+          <div
+            aria-labelledby="feedback-title"
+            aria-modal="true"
+            class="w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl dark:border-slate-700 dark:bg-slate-900"
+            role="dialog"
+          >
+            <div
+              class="mb-4 flex items-start justify-between gap-4"
+            >
+              <div>
+                <h2
+                  class="text-lg font-semibold text-slate-900 dark:text-white"
+                  id="feedback-title"
+                >
+                  Share feedback
+                </h2>
+                <p
+                  class="mt-1 text-sm text-slate-600 dark:text-slate-400"
+                >
+                  Help improve the guardian workflow with quick UX notes.
+                </p>
+              </div>
+              <button
+                aria-label="Close feedback form"
+                class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:hover:bg-slate-800 dark:hover:text-white"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-x h-5 w-5"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 6 6 18"
+                  />
+                  <path
+                    d="m6 6 12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <form
+              class="space-y-4"
+            >
+              <div
+                class="grid grid-cols-1 gap-4 sm:grid-cols-2"
+              >
+                <label
+                  class="block text-sm font-medium text-slate-700 dark:text-slate-200"
+                >
+                  Name
+                  <input
+                    class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                    maxlength="80"
+                    placeholder="Optional"
+                    value="Pat"
+                  />
+                </label>
+                <label
+                  class="block text-sm font-medium text-slate-700 dark:text-slate-200"
+                >
+                  Email
+                  <input
+                    class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                    maxlength="120"
+                    placeholder="Optional"
+                    type="email"
+                    value="pat@example.com"
+                  />
+                </label>
+              </div>
+              <fieldset>
+                <legend
+                  class="mb-2 text-sm font-medium text-slate-700 dark:text-slate-200"
+                >
+                  Experience
+                </legend>
+                <div
+                  class="grid grid-cols-3 gap-2"
+                >
+                  <label
+                    class="flex min-h-10 cursor-pointer items-center justify-center rounded-lg border border-slate-300 px-2 text-center text-sm text-slate-700 has-[:checked]:border-indigo-600 has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-700 dark:border-slate-700 dark:text-slate-200 dark:has-[:checked]:bg-indigo-950"
+                  >
+                    <input
+                      class="sr-only"
+                      name="feedback-rating"
+                      type="radio"
+                      value="Excellent"
+                    />
+                    Excellent
+                  </label>
+                  <label
+                    class="flex min-h-10 cursor-pointer items-center justify-center rounded-lg border border-slate-300 px-2 text-center text-sm text-slate-700 has-[:checked]:border-indigo-600 has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-700 dark:border-slate-700 dark:text-slate-200 dark:has-[:checked]:bg-indigo-950"
+                  >
+                    <input
+                      checked=""
+                      class="sr-only"
+                      name="feedback-rating"
+                      type="radio"
+                      value="Good"
+                    />
+                    Good
+                  </label>
+                  <label
+                    class="flex min-h-10 cursor-pointer items-center justify-center rounded-lg border border-slate-300 px-2 text-center text-sm text-slate-700 has-[:checked]:border-indigo-600 has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-700 dark:border-slate-700 dark:text-slate-200 dark:has-[:checked]:bg-indigo-950"
+                  >
+                    <input
+                      class="sr-only"
+                      name="feedback-rating"
+                      type="radio"
+                      value="Needs work"
+                    />
+                    Needs work
+                  </label>
+                </div>
+              </fieldset>
+              <label
+                class="block text-sm font-medium text-slate-700 dark:text-slate-200"
+              >
+                Feedback
+                <textarea
+                  class="mt-1 w-full resize-none rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 dark:border-slate-700 dark:bg-slate-950 dark:text-white"
+                  maxlength="1200"
+                  placeholder="What should be improved?"
+                  required=""
+                  rows="5"
+                >
+                  Make the navigation clearer.
+                </textarea>
+              </label>
+              <div
+                class="flex items-center justify-end gap-3"
+              >
+                <button
+                  class="rounded-lg px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+                  type="button"
+                >
+                  Cancel
+                </button>
+                <button
+                  class="inline-flex min-h-10 items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:focus:ring-offset-slate-900"
+                  disabled=""
+                  type="submit"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-send h-4 w-4"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
+                    />
+                    <path
+                      d="m21.854 2.147-10.94 10.939"
+                    />
+                  </svg>
+                  Sending
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </body>
+
+      195 |     expect(screen.getByRole('button', { name: en.sending })).toBeDisabled();
+      196 |     await act(async () => { await i18n.changeLanguage('es'); });
+    > 197 |     expect(screen.getByRole('button', { name: es.sending })).toBeDisabled();
+          |                   ^
+      198 |     await act(async () => { finish({ ok: true }); });
+      199 |     await waitFor(() => expect(screen.getByText(es.success)).toBeInTheDocument());
+      200 |   });
+
+      at Object.getElementError (../source/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at ../source/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at Object.getByRole (src/components/__tests__/FeedbackModal.i18n.test.tsx:197:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       11 failed, 2 passed, 13 total
+Snapshots:   0 total
+Time:        12.57 s
+Ran all test suites within paths "src/components/__tests__/FeedbackModal.i18n.test.tsx".
+Test results written to: ../../../vero-guardian-160/logs/before.json

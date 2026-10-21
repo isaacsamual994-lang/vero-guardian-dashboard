@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-21T21:11:51.101002+00:00",
+  "job_id": "vero-guardian-160",
+  "local_commit": "5092f52cb6ca20a0f17f09840d32b008f35273b5",
+  "tree": "180d09b190574ce51dd1af4dbc7010d6d5d4f890",
+  "base": "85999075b5737740237a1b2c796019c78e5fff58",
+  "files": [
+    "src/components/FeedbackModal.tsx",
+    "src/i18n/locales/en.json",
+    "src/i18n/locales/es.json",
+    "src/i18n/locales/fr.json",
+    "src/components/__tests__/FeedbackModal.i18n.test.tsx"
+  ],
+  "tracked_files_checked": 263,
+  "tests_passed": 875,
+  "tests_failed": 0,
+  "suites_passed": 77,
+  "new_tests": 13,
+  "negative_control": {
+    "passed": 2,
+    "failed": 11
+  },
+  "typecheck_exit_code": 0,
+  "lint": {
+    "errors": 0,
+    "warnings": 32,
+    "changed_file_warnings": 0
+  },
+  "production_build_exit_code": 0,
+  "screenshots": 6,
+  "visual_fixture": "Actual FeedbackModal, repository CSS and dictionaries in nonpersistent WebKit; synthetic fetch. No live feedback sent.",
+  "environment": "macOS arm64, Node24.20.0, case-sensitive workspace, existing exact-lockfile dependencies reused",
+  "reward_confirmed": false,
+  "assignment_confirmed": false,
+  "spent_aud": "0.00",
+  "source_hashes": {
+    "src/components/FeedbackModal.tsx": "c6cef10cebe5a73394face55ef9a2aaac0466b8fccbf65bf08edbe5b5a521357",
+    "src/i18n/locales/en.json": "a98abb668eb91d114905e27547db85529fc21b370de0c701f3a2d40bd163e4df",
+    "src/i18n/locales/es.json": "878e428fcbcd3fcd695b5f0da6fa63ab47d6851645b65b35b71120b69cb65c1d",
+    "src/i18n/locales/fr.json": "ff3d82cee08fa85cd76efbdcbdd04617a83ca8d1e3888e773089a97d0b12ce9b",
+    "src/components/__tests__/FeedbackModal.i18n.test.tsx": "a79f23c32dc62bfae5173b74eecc3a8e9516938ca58530d38e460c8ac2770e4b"
+  }
+}

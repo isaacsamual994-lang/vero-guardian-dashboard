@@ -1,0 +1,10 @@
+{
+  "fixture": "http://127.0.0.1:4388/?lang=es&theme=dark",
+  "steps": [
+    "Opened Spanish feedback form in visible Charlotte browser",
+    "Typed synthetic feedback and submitted to mocked local fetch",
+    "Observed localized success confirmation"
+  ],
+  "real_api_calls": false,
+  "production_e2e": false
+}

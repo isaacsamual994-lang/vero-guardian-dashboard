@@ -1,0 +1,700 @@
+PASS src/audit-guard/__tests__/gasMonitor.test.ts (5.832 s)
+  ● Console
+
+    console.info
+      gas[cast_vote] ok cpuInstructions=12.5M/100M(13%) memoryBytes=524.3K/41.9M(1%) ledgerReadBytes=20K/200K(10%) ledgerWriteBytes=10K/132.1K(8%) ledgerReadEntries=8/40(20%) ledgerWriteEntries=3/25(12%) resourceFeeStroops=1M/100M(1%) {
+        functionName: 'cast_vote',
+        severity: 'ok',
+        withinLimits: true,
+        usage: {
+          cpuInstructions: 12500000,
+          memoryBytes: 524288,
+          ledgerReadBytes: 20000,
+          ledgerWriteBytes: 10000,
+          ledgerReadEntries: 8,
+          ledgerWriteEntries: 3,
+          resourceFeeStroops: 1000000
+        },
+        limits: {
+          cpuInstructions: 100000000,
+          memoryBytes: 41943040,
+          ledgerReadBytes: 200000,
+          ledgerWriteBytes: 132096,
+          ledgerReadEntries: 40,
+          ledgerWriteEntries: 25,
+          resourceFeeStroops: 100000000
+        },
+        utilization: {
+          cpuInstructions: 0.125,
+          memoryBytes: 0.0125,
+          ledgerReadBytes: 0.1,
+          ledgerWriteBytes: 0.07570251937984496,
+          ledgerReadEntries: 0.2,
+          ledgerWriteEntries: 0.12,
+          resourceFeeStroops: 0.01
+        },
+        violations: [],
+        timestamp: '2026-10-21T21:03:14.822Z'
+      }
+
+      at Object.info (src/audit-guard/gasMonitor.ts:226:38)
+
+    console.info
+      gas[cast_vote] ok cpuInstructions=12.5M/100M(13%) memoryBytes=524.3K/41.9M(1%) ledgerReadBytes=20K/200K(10%) ledgerWriteBytes=10K/132.1K(8%) ledgerReadEntries=8/40(20%) ledgerWriteEntries=3/25(12%) resourceFeeStroops=1M/100M(1%) {
+        functionName: 'cast_vote',
+        severity: 'ok',
+        withinLimits: true,
+        usage: {
+          cpuInstructions: 12500000,
+          memoryBytes: 524288,
+          ledgerReadBytes: 20000,
+          ledgerWriteBytes: 10000,
+          ledgerReadEntries: 8,
+          ledgerWriteEntries: 3,
+          resourceFeeStroops: 1000000
+        },
+        limits: {
+          cpuInstructions: 100000000,
+          memoryBytes: 41943040,
+          ledgerReadBytes: 200000,
+          ledgerWriteBytes: 132096,
+          ledgerReadEntries: 40,
+          ledgerWriteEntries: 25,
+          resourceFeeStroops: 100000000
+        },
+        utilization: {
+          cpuInstructions: 0.125,
+          memoryBytes: 0.0125,
+          ledgerReadBytes: 0.1,
+          ledgerWriteBytes: 0.07570251937984496,
+          ledgerReadEntries: 0.2,
+          ledgerWriteEntries: 0.12,
+          resourceFeeStroops: 0.01
+        },
+        violations: [],
+        timestamp: '2026-10-21T21:03:14.849Z'
+      }
+
+      at Object.info (src/audit-guard/gasMonitor.ts:226:38)
+
+PASS src/components/security/__tests__/vulnerabilityParser.test.ts
+PASS src/tests/wallet.test.tsx
+  ● Console
+
+    console.error
+      Warning: An update to WalletProvider inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at children ([validation-workspace]/src/context/WalletContext.tsx:70:34)
+
+      106 |     removeSessionItem(PROVIDER_STORAGE_KEY);
+      107 |     removeSessionItem('vero_wallet_last_active');
+    > 108 |     setPublicKey(null);
+          |     ^
+      109 |     setActiveProvider(null);
+      110 |     setReputation(0);
+      111 |     setError(nextError);
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setPublicKey (src/context/WalletContext.tsx:108:5)
+      at clearWalletState (src/context/WalletContext.tsx:159:11)
+
+    console.error
+      Warning: An update to WalletProvider inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at children ([validation-workspace]/src/context/WalletContext.tsx:70:34)
+
+      107 |     removeSessionItem('vero_wallet_last_active');
+      108 |     setPublicKey(null);
+    > 109 |     setActiveProvider(null);
+          |     ^
+      110 |     setReputation(0);
+      111 |     setError(nextError);
+      112 |   }, []);
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setActiveProvider (src/context/WalletContext.tsx:109:5)
+      at clearWalletState (src/context/WalletContext.tsx:159:11)
+
+    console.error
+      Warning: An update to WalletProvider inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at children ([validation-workspace]/src/context/WalletContext.tsx:70:34)
+
+      108 |     setPublicKey(null);
+      109 |     setActiveProvider(null);
+    > 110 |     setReputation(0);
+          |     ^
+      111 |     setError(nextError);
+      112 |   }, []);
+      113 |
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setReputation (src/context/WalletContext.tsx:110:5)
+      at clearWalletState (src/context/WalletContext.tsx:159:11)
+
+    console.error
+      Warning: An update to WalletProvider inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at children ([validation-workspace]/src/context/WalletContext.tsx:70:34)
+
+      109 |     setActiveProvider(null);
+      110 |     setReputation(0);
+    > 111 |     setError(nextError);
+          |     ^
+      112 |   }, []);
+      113 |
+      114 |   const refreshVerifiedWallet = useCallback(async (showLoading: boolean) => {
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setError (src/context/WalletContext.tsx:111:5)
+      at clearWalletState (src/context/WalletContext.tsx:159:11)
+
+    console.error
+      Warning: An update to WalletProvider inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at children ([validation-workspace]/src/context/WalletContext.tsx:70:34)
+
+      176 |       } finally {
+      177 |         if (isMounted) {
+    > 178 |           setIsLoading(false);
+          |           ^
+      179 |         }
+      180 |       }
+      181 |     };
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setIsLoading (src/context/WalletContext.tsx:178:11)
+
+    console.error
+      Wallet connection error: Error: Freighter wallet is not installed
+          at Object.connect ([validation-workspace]/src/lib/wallets/freighter.ts:111:13)
+          at connect ([validation-workspace]/src/context/WalletContext.tsx:267:46)
+          at connect ([validation-workspace]/src/tests/wallet.test.tsx:122:30)
+          at HTMLUnknownElement.callCallback ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+          at invokeEventListeners ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+          at HTMLUnknownElementImpl._dispatch ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+          at HTMLUnknownElementImpl.dispatchEvent ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+          at HTMLUnknownElement.dispatchEvent ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+          at Object.invokeGuardedCallbackDev ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+          at invokeGuardedCallback ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+          at invokeGuardedCallbackAndCatchFirstError ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:4291:25)
+          at executeDispatch ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:9041:3)
+          at processDispatchQueueItemsInOrder ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:9073:7)
+          at processDispatchQueue ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:9086:5)
+          at dispatchEventsForPlugins ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:9097:3)
+          at [local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:9288:12
+          at batchedUpdates$1 ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:26179:12)
+          at batchedUpdates ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:3991:12)
+          at dispatchEventForPluginEventSystem ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:9287:3)
+          at dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:6465:5)
+          at dispatchEvent ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:6457:5)
+          at dispatchDiscreteEvent ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react-dom/cjs/react-dom.development.js:6430:5)
+          at HTMLDivElement.callTheUserObjectsOperation ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+          at invokeEventListeners ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+          at HTMLButtonElementImpl._dispatch ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+          at HTMLButtonElementImpl.dispatchEvent ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+          at HTMLButtonElement.dispatchEvent ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+          at [local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/@testing-library/dom/dist/events.js:19:20
+          at [local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/@testing-library/react/dist/pure.js:107:16
+          at [local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/@testing-library/react/dist/act-compat.js:47:24
+          at act ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/react/cjs/react.development.js:2512:16)
+          at [local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/@testing-library/react/dist/act-compat.js:46:25
+          at Object.eventWrapper ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/@testing-library/react/dist/pure.js:106:28)
+          at fireEvent ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/@testing-library/dom/dist/events.js:12:35)
+          at fireEvent.<computed> [as click] ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/@testing-library/dom/dist/events.js:110:36)
+          at fireEvent.<computed> [as click] ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/@testing-library/react/dist/fire-event.js:15:52)
+          at Object.click ([validation-workspace]/src/tests/wallet.test.tsx:286:17)
+
+      270 |       } catch (connectError) {
+      271 |         const message = getErrorMessage(connectError, 'Failed to connect wallet');
+    > 272 |         console.error('Wallet connection error:', connectError);
+          |                 ^
+      273 |         clearWalletState(message);
+      274 |       } finally {
+      275 |         setIsLoading(false);
+
+      at error (src/context/WalletContext.tsx:272:17)
+
+    console.error
+      Wallet connection error: Error: User denied access
+          at Object.<anonymous> ([validation-workspace]/src/tests/wallet.test.tsx:296:55)
+          at Promise.finally.completed ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:1561:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:1501:10)
+          at _callCircusTest ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:1011:40)
+          at _runTest ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:951:3)
+          at [local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:853:7
+          at _runTestsForDescribeBlock ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:866:11)
+          at _runTestsForDescribeBlock ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:861:11)
+          at _runTestsForDescribeBlock ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:861:11)
+          at run ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:765:3)
+          at runAndTransformResultsToJestFormat ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:1993:21)
+          at jestAdapter ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/runner.js:111:19)
+          at runTestInternal ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-runner/build/index.js:276:16)
+          at runTest ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-runner/build/index.js:344:7)
+
+      270 |       } catch (connectError) {
+      271 |         const message = getErrorMessage(connectError, 'Failed to connect wallet');
+    > 272 |         console.error('Wallet connection error:', connectError);
+          |                 ^
+      273 |         clearWalletState(message);
+      274 |       } finally {
+      275 |         setIsLoading(false);
+
+      at error (src/context/WalletContext.tsx:272:17)
+
+PASS src/components/ProofViewer/__tests__/ProofHistoryTable.test.tsx
+PASS src/services/__tests__/txBuilder.test.ts
+PASS src/components/EmergencyHaltButton/__tests__/EmergencyHaltButton.test.tsx
+  ● Console
+
+    console.error
+      Warning: An update to EmergencyHaltButton inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at EmergencyHaltButton ([validation-workspace]/src/components/EmergencyHaltButton/EmergencyHaltButton.tsx:99:51)
+
+      146 |       );
+      147 |
+    > 148 |       setIsHalted(true);
+          |       ^
+      149 |       emitEvent({ type: 'emergency_halt', actor: publicKey, resource: 'contract', resourceId: CONTRACT_ID, metadata: { transactionHash: hash } });
+      150 |       void appendAuditEvent({
+      151 |         id: `halt-${hash}`,
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setIsHalted (src/components/EmergencyHaltButton/EmergencyHaltButton.tsx:148:7)
+
+    console.error
+      Warning: An update to EmergencyHaltButton inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at EmergencyHaltButton ([validation-workspace]/src/components/EmergencyHaltButton/EmergencyHaltButton.tsx:99:51)
+
+      192 |       showToast(message, 'error');
+      193 |     } finally {
+    > 194 |       setIsHalting(false);
+          |       ^
+      195 |     }
+      196 |   }
+      197 |
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setIsHalting (src/components/EmergencyHaltButton/EmergencyHaltButton.tsx:194:7)
+
+PASS src/components/AuditSessionTimer/__tests__/AuditSessionTimer.test.tsx
+PASS src/hooks/__tests__/useOnChainCache.test.ts
+PASS src/hooks/__tests__/usePlayback.test.ts
+PASS src/components/Layout/__tests__/Layout.test.tsx
+PASS src/components/__tests__/FeedbackModal.i18n.test.tsx
+PASS src/components/BatchTxBuilder/__tests__/batchTxBuilder.test.ts
+PASS src/components/ContractTimeTraveler/__tests__/ContractTimeTraveler.test.tsx
+PASS src/components/ContractCallGraph/__tests__/ContractCallGraph.test.tsx
+  ● Console
+
+    console.error
+      Warning: An update to ContractCallGraph inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at graph ([validation-workspace]/src/components/ContractCallGraph/ContractCallGraph.tsx:163:3)
+
+      225 |
+      226 |       cyRef.current = cy;
+    > 227 |       setIsReady(true);
+          |       ^
+      228 |
+      229 |       // Node tap — show detail and highlight neighbourhood
+      230 |       cy.on('tap', 'node', (evt) => {
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setIsReady (src/components/ContractCallGraph/ContractCallGraph.tsx:227:7)
+
+    console.error
+      Warning: An update to ContractCallGraph inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at graph ([validation-workspace]/src/components/ContractCallGraph/ContractCallGraph.tsx:163:3)
+
+      225 |
+      226 |       cyRef.current = cy;
+    > 227 |       setIsReady(true);
+          |       ^
+      228 |
+      229 |       // Node tap — show detail and highlight neighbourhood
+      230 |       cy.on('tap', 'node', (evt) => {
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setIsReady (src/components/ContractCallGraph/ContractCallGraph.tsx:227:7)
+
+    console.error
+      Warning: An update to ContractCallGraph inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at graph ([validation-workspace]/src/components/ContractCallGraph/ContractCallGraph.tsx:163:3)
+
+      225 |
+      226 |       cyRef.current = cy;
+    > 227 |       setIsReady(true);
+          |       ^
+      228 |
+      229 |       // Node tap — show detail and highlight neighbourhood
+      230 |       cy.on('tap', 'node', (evt) => {
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setIsReady (src/components/ContractCallGraph/ContractCallGraph.tsx:227:7)
+
+    console.error
+      Warning: An update to ContractCallGraph inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at graph ([validation-workspace]/src/components/ContractCallGraph/ContractCallGraph.tsx:163:3)
+
+      225 |
+      226 |       cyRef.current = cy;
+    > 227 |       setIsReady(true);
+          |       ^
+      228 |
+      229 |       // Node tap — show detail and highlight neighbourhood
+      230 |       cy.on('tap', 'node', (evt) => {
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setIsReady (src/components/ContractCallGraph/ContractCallGraph.tsx:227:7)
+
+    console.error
+      Warning: An update to ContractCallGraph inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at graph ([validation-workspace]/src/components/ContractCallGraph/ContractCallGraph.tsx:163:3)
+
+      225 |
+      226 |       cyRef.current = cy;
+    > 227 |       setIsReady(true);
+          |       ^
+      228 |
+      229 |       // Node tap — show detail and highlight neighbourhood
+      230 |       cy.on('tap', 'node', (evt) => {
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setIsReady (src/components/ContractCallGraph/ContractCallGraph.tsx:227:7)
+
+    console.error
+      Warning: An update to ContractCallGraph inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at graph ([validation-workspace]/src/components/ContractCallGraph/ContractCallGraph.tsx:163:3)
+
+      225 |
+      226 |       cyRef.current = cy;
+    > 227 |       setIsReady(true);
+          |       ^
+      228 |
+      229 |       // Node tap — show detail and highlight neighbourhood
+      230 |       cy.on('tap', 'node', (evt) => {
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setIsReady (src/components/ContractCallGraph/ContractCallGraph.tsx:227:7)
+
+PASS src/services/__tests__/push.test.ts
+PASS src/components/__tests__/TaskCard.test.tsx
+PASS src/components/VoteButton/__tests__/VoteButton.test.tsx
+  ● Console
+
+    console.error
+      Warning: An update to VoteButton inside a test was not wrapped in act(...).
+      
+      When testing, code that causes React state updates should be wrapped into act(...):
+      
+      act(() => {
+        /* fire events that update state */
+      });
+      /* assert on the output */
+      
+      This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+          at prId ([validation-workspace]/src/components/VoteButton/index.tsx:108:4)
+
+      74 |       const hash = await castVote(prId, publicKey, horizonUrl, networkPassphrase, providerId);
+      75 |       const next: VoteTxState = { status: 'success', txHash: hash, errorKind: null, errorMessage: null };
+    > 76 |       setState(next);
+         |       ^
+      77 |
+      78 |       void appendAuditEvent({
+      79 |         id: `vote-${prId}-${hash}`,
+
+      at printWarning (../source/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../source/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../source/node_modules/react-dom/cjs/react-dom.development.js:27628:9)
+      at scheduleUpdateOnFiber (../source/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at dispatchSetState (../source/node_modules/react-dom/cjs/react-dom.development.js:16708:7)
+      at setState (src/hooks/useVoteTransaction.ts:76:7)
+      at handleVote (src/components/VoteButton/index.tsx:151:20)
+
+PASS src/components/NetworkStatus/__tests__/NetworkStatus.test.tsx
+PASS src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx
+PASS src/components/TransactionFeed/__tests__/TransactionFeed.test.tsx
+PASS src/components/TransactionNotification/__tests__/TransactionNotification.test.tsx
+PASS src/components/search/__tests__/useSearchIndex.test.tsx
+PASS src/components/search/__tests__/indexer.test.ts
+PASS src/utils/__tests__/logger.test.ts
+PASS src/components/security/__tests__/RelayerVault.test.tsx
+PASS src/components/VoteProgressBar/__tests__/VoteProgressBar.test.tsx
+PASS src/components/security/__tests__/AuditExport.test.tsx
+  ● Console
+
+    console.error
+      Failed to export audit logs: Error: Decryption failed
+          at Object.<anonymous> ([validation-workspace]/src/components/security/__tests__/AuditExport.test.tsx:162:57)
+          at Promise.finally.completed ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:1561:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:1501:10)
+          at _callCircusTest ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:1011:40)
+          at _runTest ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:951:3)
+          at [local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:853:7
+          at _runTestsForDescribeBlock ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:866:11)
+          at _runTestsForDescribeBlock ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:861:11)
+          at run ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:765:3)
+          at runAndTransformResultsToJestFormat ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/jestAdapterInit.js:1993:21)
+          at jestAdapter ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-circus/build/runner.js:111:19)
+          at runTestInternal ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-runner/build/index.js:276:16)
+          at runTest ([local-evidence]/support/vero-guardian-159/case-sensitive-root/source/node_modules/jest-runner/build/index.js:344:7)
+
+      83 |       URL.revokeObjectURL(url);
+      84 |     } catch (err) {
+    > 85 |       console.error('Failed to export audit logs:', err);
+         |               ^
+      86 |       const message = err instanceof Error ? err.message : 'Unknown error';
+      87 |       setError(t('auditExport.error', { message }));
+      88 |     } finally {
+
+      at error (src/components/security/AuditExport.tsx:85:15)
+
+PASS src/components/BatchTxBuilder/__tests__/BatchTxBuilder.test.tsx
+PASS src/services/__tests__/roleClient.test.ts
+PASS src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx
+PASS src/lib/__tests__/rate-limit.test.ts
+PASS src/components/DiffEngine/__tests__/DiffEngine.test.tsx
+PASS src/components/search/__tests__/fuzzySearch.test.ts
+PASS src/auth/__tests__/session.test.ts
+PASS src/lib/__tests__/push-store.test.ts
+  ● Console
+
+    console.warn
+      [PushSubscriptionStore] Warning: Failed to read subscriptions from [local-evidence]/support/vero-guardian-160/tmp/push-store-test-h2vm7h/subscriptions.json: SyntaxError: Unexpected token 'I', "INVALID_JS"... is not valid JSON
+          at JSON.parse (<anonymous>)
+          at parse ([validation-workspace]/src/lib/push-store.ts:55:29)
+          at PushSubscriptionStore.ensureInitialized ([validation-workspace]/src/lib/push-store.ts:80:5)
+          at PushSubscriptionStore.count ([validation-workspace]/src/lib/push-store.ts:146:19)
+          at Object.<anonymous> ([validation-workspace]/src/lib/__tests__/push-store.test.ts:138:12)
+
+      72 |       } catch (err) {
+      73 |         // Corrupt or unreadable file: start with fresh empty map and warn
+    > 74 |         console.warn(`[PushSubscriptionStore] Warning: Failed to read subscriptions from ${this.filePath}:`, err);
+         |                 ^
+      75 |       }
+      76 |
+      77 |       this.cache = map;
+
+      at warn (src/lib/push-store.ts:74:17)
+      at PushSubscriptionStore.ensureInitialized (src/lib/push-store.ts:80:5)
+      at PushSubscriptionStore.count (src/lib/push-store.ts:146:19)
+      at Object.<anonymous> (src/lib/__tests__/push-store.test.ts:138:12)
+
+PASS src/app/api/push/route.test.ts
+PASS src/services/__tests__/socketClient.test.ts
+PASS src/hooks/__tests__/useSocketIO.test.ts
+PASS src/tests/audit-viewer.test.tsx
+PASS src/components/GasHeatmap/__tests__/GasHeatmap.test.tsx (10.766 s)
+PASS src/components/ReputationSimulator/__tests__/reputationSimulator.test.ts
+PASS src/components/security/__tests__/SecurityScannerResults.test.tsx
+PASS src/services/__tests__/contractClient.test.ts
+PASS src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx
+PASS src/context/__tests__/NetworkContext.test.tsx
+PASS src/context/__tests__/AlertContext.test.tsx
+PASS src/lib/wallets/__tests__/providers.test.ts
+PASS src/components/EventMonitor/__tests__/EventMonitor.test.tsx
+PASS src/tests/error-modal.test.tsx
+PASS src/components/__tests__/AlertBanner.test.tsx
+PASS src/components/EventMonitor/__tests__/eventMonitorUtils.test.ts
+PASS src/hooks/__tests__/useVoteTransaction.test.ts
+PASS src/utils/__tests__/diff.test.ts
+PASS src/tests/wallet-multiprovider.test.tsx
+PASS src/components/__tests__/PushNotificationToggle.test.tsx
+PASS src/components/dashboard/__tests__/DashboardGrid.test.tsx
+PASS src/services/__tests__/vault.test.ts
+PASS src/context/__tests__/WalletContext.setMockPublicKey.test.ts
+PASS src/components/leaderboard/__tests__/score.test.ts
+PASS src/hooks/__tests__/useEvents.test.ts
+PASS src/components/ConsensusWidget/__tests__/consensusWidget.test.ts
+PASS src/components/analytics/__tests__/GasHeatmap.test.tsx
+PASS src/components/GlobalStateSearch/__tests__/GlobalStateSearch.test.tsx
+PASS src/services/__tests__/rpc.test.ts
+PASS src/components/Guard/__tests__/AccessControl.test.tsx
+PASS src/components/timer/__tests__/SessionTimer.test.tsx
+PASS src/components/__tests__/ThemeToggle.test.tsx
+PASS src/services/__tests__/githubClient.test.ts
+PASS __tests__/security-headers.test.js
+PASS src/hooks/__tests__/useChainState.test.ts
+PASS src/hooks/__tests__/useTaskChainEvents.test.ts
+PASS src/components/__tests__/FeedbackModal.test.tsx
+PASS src/__tests__/integration.activity-export.test.tsx
+PASS src/i18n/config.test.ts
+PASS src/app/api/feedback/route.test.ts
+PASS src/hooks/__tests__/useActivityStream.test.tsx
+PASS src/components/ActivityLogExport/__tests__/ActivityLogExport.test.tsx
+
+Test Suites: 77 passed, 77 total
+Tests:       875 passed, 875 total
+Snapshots:   0 total
+Time:        42.033 s
+Ran all test suites.
+Test results written to: ../../../vero-guardian-160/logs/tests.json
