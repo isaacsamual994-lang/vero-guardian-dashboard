@@ -1,0 +1,91 @@
+FAIL src/lib/__tests__/stellar-expert.test.ts (10.034 s)
+  getStellarExplorerTxUrl
+    ✕ normalizes a uppercase transaction hash (3 ms)
+    ✕ normalizes a mixed-case transaction hash
+    ✕ normalizes a padded uppercase transaction hash (1 ms)
+    ✕ normalizes a tabs and newlines transaction hash
+    ✓ normalizes a already lowercase transaction hash (1 ms)
+    ✓ normalizes a padded lowercase transaction hash
+    ✓ preserves the empty result for invalid runtime input "" (3 ms)
+    ✓ preserves the empty result for invalid runtime input null
+    ✓ preserves the empty result for invalid runtime input undefined
+    ✓ preserves the empty result for invalid runtime input 0 (1 ms)
+    ✓ preserves the empty result for invalid runtime input 42
+    ✓ preserves the empty result for invalid runtime input false
+    ✓ preserves the empty result for invalid runtime input {}
+    ✓ preserves the empty result for invalid runtime input []
+
+  ● getStellarExplorerTxUrl › normalizes a uppercase transaction hash
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "https://stellar.expert/explorer/public/tx/abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+    Received: "https://stellar.expert/explorer/public/tx/ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789"
+
+      14 |     ['padded lowercase', `  ${hash}  `],
+      15 |   ])('normalizes a %s transaction hash', (_name, input) => {
+    > 16 |     expect(getStellarExplorerTxUrl(input)).toBe(explorerUrl);
+         |                                            ^
+      17 |   });
+      18 |
+      19 |   test.each<[unknown]>([[''], [null], [undefined], [0], [42], [false], [{}], [[]]])(
+
+      at toBe (src/lib/__tests__/stellar-expert.test.ts:16:44)
+
+  ● getStellarExplorerTxUrl › normalizes a mixed-case transaction hash
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "https://stellar.expert/explorer/public/tx/abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+    Received: "https://stellar.expert/explorer/public/tx/AbCdEf0123456789AbCdEf0123456789AbCdEf0123456789AbCdEf0123456789"
+
+      14 |     ['padded lowercase', `  ${hash}  `],
+      15 |   ])('normalizes a %s transaction hash', (_name, input) => {
+    > 16 |     expect(getStellarExplorerTxUrl(input)).toBe(explorerUrl);
+         |                                            ^
+      17 |   });
+      18 |
+      19 |   test.each<[unknown]>([[''], [null], [undefined], [0], [42], [false], [{}], [[]]])(
+
+      at toBe (src/lib/__tests__/stellar-expert.test.ts:16:44)
+
+  ● getStellarExplorerTxUrl › normalizes a padded uppercase transaction hash
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "https://stellar.expert/explorer/public/tx/abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+    Received: "https://stellar.expert/explorer/public/tx/ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789"
+
+      14 |     ['padded lowercase', `  ${hash}  `],
+      15 |   ])('normalizes a %s transaction hash', (_name, input) => {
+    > 16 |     expect(getStellarExplorerTxUrl(input)).toBe(explorerUrl);
+         |                                            ^
+      17 |   });
+      18 |
+      19 |   test.each<[unknown]>([[''], [null], [undefined], [0], [42], [false], [{}], [[]]])(
+
+      at toBe (src/lib/__tests__/stellar-expert.test.ts:16:44)
+
+  ● getStellarExplorerTxUrl › normalizes a tabs and newlines transaction hash
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "https://stellar.expert/explorer/public/tx/abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789"
+    Received: "https://stellar.expert/explorer/public/tx/ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789"
+
+      14 |     ['padded lowercase', `  ${hash}  `],
+      15 |   ])('normalizes a %s transaction hash', (_name, input) => {
+    > 16 |     expect(getStellarExplorerTxUrl(input)).toBe(explorerUrl);
+         |                                            ^
+      17 |   });
+      18 |
+      19 |   test.each<[unknown]>([[''], [null], [undefined], [0], [42], [false], [{}], [[]]])(
+
+      at toBe (src/lib/__tests__/stellar-expert.test.ts:16:44)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 10 passed, 14 total
+Snapshots:   0 total
+Time:        16.114 s
+Ran all test suites within paths "src/lib/__tests__/stellar-expert.test.ts".
+Test results written to: ../../../vero-guardian-170/logs/regression-before.json

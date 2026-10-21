@@ -1,0 +1,44 @@
+{
+  "verified_at": "2026-10-21T20:38:50.923135+00:00",
+  "job_id": "vero-guardian-170",
+  "local_commit": "431b9fbce09d9598e68b58f6499aaa57d059311a",
+  "tree": "e57bdbc53023883b0a3f5e1e178055f339dd2447",
+  "base": "85999075b5737740237a1b2c796019c78e5fff58",
+  "files": [
+    "src/lib/stellar-expert.ts",
+    "src/lib/__tests__/stellar-expert.test.ts"
+  ],
+  "tracked_files_identical_to_validation": 263,
+  "focused_tests_passed": 14,
+  "full_tests": {
+    "passed": 876,
+    "failed": 0,
+    "suites": 77
+  },
+  "typecheck_exit_code": 0,
+  "lint": {
+    "errors": 0,
+    "warnings": 32,
+    "changed_file_warnings": 0
+  },
+  "build": {
+    "command": "next build",
+    "bundler": "Turbopack",
+    "exit_code": 0
+  },
+  "regression_before": {
+    "passed": 10,
+    "failed": 4,
+    "runtime_errors": 0
+  },
+  "environment": {
+    "platform": "macOS arm64",
+    "node": "v24.20.0",
+    "filesystem": "case-sensitive HFSX",
+    "dependencies": "existing complete lockfile-matched Vero install reused; local placement restored after build"
+  },
+  "original_build_attempt": "Rejected a symlink outside Turbopack root; same dependency directory temporarily placed inside isolated project for successful rerun. No config or source change.",
+  "dependency_restore_verified": true,
+  "money_spent_aud": "0.00",
+  "reward_confirmed": false
+}

@@ -1,0 +1,71 @@
+{
+  "passed": 10,
+  "failed": 4,
+  "total": 14,
+  "suites_passed": 0,
+  "suites_failed": 1,
+  "files": [
+    {
+      "file": "[validation-workspace]/src/lib/__tests__/stellar-expert.test.ts",
+      "status": "failed",
+      "tests": [
+        {
+          "name": "getStellarExplorerTxUrl normalizes a uppercase transaction hash",
+          "status": "failed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a mixed-case transaction hash",
+          "status": "failed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a padded uppercase transaction hash",
+          "status": "failed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a tabs and newlines transaction hash",
+          "status": "failed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a already lowercase transaction hash",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a padded lowercase transaction hash",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input \"\"",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input null",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input undefined",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input 0",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input 42",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input false",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input {}",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input []",
+          "status": "passed"
+        }
+      ]
+    }
+  ]
+}
