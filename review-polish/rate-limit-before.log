@@ -1,0 +1,82 @@
+FAIL src/components/__tests__/FeedbackModal.i18n.test.tsx (6.24 s)
+  FeedbackModal translations
+    ✓ translates controls and accessible labels in en (72 ms)
+    ✓ translates controls and accessible labels in es (18 ms)
+    ✓ translates controls and accessible labels in fr (17 ms)
+    ✓ keeps canonical API rating values while showing en labels (39 ms)
+    ✓ keeps canonical API rating values while showing es labels (40 ms)
+    ✓ keeps canonical API rating values while showing fr labels (23 ms)
+    ✓ switches languages without losing form content or rating (21 ms)
+    ✓ localizes server error Feedback message is required. and updates it on language change (16 ms)
+    ✓ localizes server error Enter a valid email address. and updates it on language change (16 ms)
+    ✓ localizes server error Feedback submission failed. and updates it on language change (16 ms)
+    ✓ localizes server error Invalid feedback payload. and updates it on language change (16 ms)
+    ✓ localizes server error Unrecognized server message and updates it on language change (16 ms)
+    ✕ explains a rate-limit response and preserves retryable form state in en (17 ms)
+    ✕ explains a rate-limit response and preserves retryable form state in es (16 ms)
+    ✕ explains a rate-limit response and preserves retryable form state in fr (16 ms)
+    ✓ translates the disabled submitting state and eventual success (15 ms)
+
+  ● FeedbackModal translations › explains a rate-limit response and preserves retryable form state in en
+
+    expect(element).toHaveTextContent()
+
+    Expected element to have text content:
+      Too many requests. Please wait a moment and try again.
+    Received:
+      Feedback could not be sent.
+
+      197 |     fireEvent.click(screen.getByRole('radio', { name: labels.ratings.needsWork }));
+      198 |     fireEvent.click(screen.getByRole('button', { name: labels.submit }));
+    > 199 |     expect(await screen.findByRole('alert')).toHaveTextContent(labels.errors.rateLimit);
+          |                                              ^
+      200 |     expect(screen.getByRole('alert')).not.toHaveTextContent(labels.errors.send);
+      201 |     expect(screen.getByLabelText(labels.message)).toHaveValue('Make the navigation clearer.');
+      202 |     expect(screen.getByRole('radio', { name: labels.ratings.needsWork })).toBeChecked();
+
+      at toHaveTextContent (src/components/__tests__/FeedbackModal.i18n.test.tsx:199:46)
+
+  ● FeedbackModal translations › explains a rate-limit response and preserves retryable form state in es
+
+    expect(element).toHaveTextContent()
+
+    Expected element to have text content:
+      Demasiadas solicitudes. Espera un momento y vuelve a intentarlo.
+    Received:
+      No se pudieron enviar los comentarios.
+
+      197 |     fireEvent.click(screen.getByRole('radio', { name: labels.ratings.needsWork }));
+      198 |     fireEvent.click(screen.getByRole('button', { name: labels.submit }));
+    > 199 |     expect(await screen.findByRole('alert')).toHaveTextContent(labels.errors.rateLimit);
+          |                                              ^
+      200 |     expect(screen.getByRole('alert')).not.toHaveTextContent(labels.errors.send);
+      201 |     expect(screen.getByLabelText(labels.message)).toHaveValue('Make the navigation clearer.');
+      202 |     expect(screen.getByRole('radio', { name: labels.ratings.needsWork })).toBeChecked();
+
+      at toHaveTextContent (src/components/__tests__/FeedbackModal.i18n.test.tsx:199:46)
+
+  ● FeedbackModal translations › explains a rate-limit response and preserves retryable form state in fr
+
+    expect(element).toHaveTextContent()
+
+    Expected element to have text content:
+      Trop de requêtes. Veuillez patienter un instant avant de réessayer.
+    Received:
+      Impossible d’envoyer l’avis.
+
+      197 |     fireEvent.click(screen.getByRole('radio', { name: labels.ratings.needsWork }));
+      198 |     fireEvent.click(screen.getByRole('button', { name: labels.submit }));
+    > 199 |     expect(await screen.findByRole('alert')).toHaveTextContent(labels.errors.rateLimit);
+          |                                              ^
+      200 |     expect(screen.getByRole('alert')).not.toHaveTextContent(labels.errors.send);
+      201 |     expect(screen.getByLabelText(labels.message)).toHaveValue('Make the navigation clearer.');
+      202 |     expect(screen.getByRole('radio', { name: labels.ratings.needsWork })).toBeChecked();
+
+      at toHaveTextContent (src/components/__tests__/FeedbackModal.i18n.test.tsx:199:46)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 13 passed, 16 total
+Snapshots:   0 total
+Time:        12.226 s
+Ran all test suites within paths "src/components/__tests__/FeedbackModal.i18n.test.tsx".
+Test results written to: ../../../vero-guardian-160/review-polish-20261022/logs/rate-limit-before.json

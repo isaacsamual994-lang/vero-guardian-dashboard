@@ -1,0 +1,30 @@
+{
+  "base": "85999075b5737740237a1b2c796019c78e5fff58",
+  "timer_tree": "7d2ac3426d6e4dbca546a3d2fcc975920005b05b",
+  "original_feedback_commit": "3fc4bd69003790fd3cc58f5ffb8ef71c5e6b5e99",
+  "checks": [
+    {
+      "file": "src/i18n/locales/en.json",
+      "both_orders_exit0": true,
+      "both_sections_retained": true,
+      "other_entries_unchanged": true,
+      "combined_sha256": "e7c2a82f538ee2737008b3452b240e9af3f8020ce1a75558b1d63aebc3e57148"
+    },
+    {
+      "file": "src/i18n/locales/es.json",
+      "both_orders_exit0": true,
+      "both_sections_retained": true,
+      "other_entries_unchanged": true,
+      "combined_sha256": "9f1dc1e60ec0756f099b2d27125bda924081dc2f191d6494da4f8becefac4816"
+    },
+    {
+      "file": "src/i18n/locales/fr.json",
+      "both_orders_exit0": true,
+      "both_sections_retained": true,
+      "other_entries_unchanged": true,
+      "combined_sha256": "cfe5db626ec395b3d9f23b6eed7e9f2b455585a36630a2a6aeed3134da78eca5"
+    }
+  ],
+  "other_changed_files_disjoint": true,
+  "upstream_merge_performed": false
+}

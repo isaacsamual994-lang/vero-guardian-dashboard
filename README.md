@@ -1,23 +1,23 @@
-# Issue 160: feedback form translations
+# PR366 review improvements
 
-Source: `3fc4bd69003790fd3cc58f5ffb8ef71c5e6b5e99`; tested tree: `180d09b190574ce51dd1af4dbc7010d6d5d4f890`; base: `85999075b5737740237a1b2c796019c78e5fff58`.
+Published source: `db36cfffcde51cb600f5907e6b75a2cafca3e763`. Tested tree: `afc752b781ef2e5b6d1f93a89867203a704a8b0b`. Base: `85999075b5737740237a1b2c796019c78e5fff58`.
 
-All feedback controls, placeholders, ratings, status messages and known API error messages now use the existing English/Spanish/French dictionaries. Canonical API rating values remain English; changing language preserves input and selection. Existing error messages map to translation keys; unknown server messages receive the translated generic fallback. This does not redesign transport, server validation, submission races or focus management.
+The existing Too many requests response now has an explicit translated wait-and-retry explanation in English, Spanish and French. Three new tests fail against the preceding PR revision (13 existing tests pass) and pass after the fix. Form contents and canonical API rating values survive the error, language changes and a mocked retry. No client-side retry timer, live request or server-rate-limit change is introduced.
 
-## Results
+The new feedback dictionary namespace is now placed at the start rather than the end of each locale file. All pre-existing entries are unchanged. Three-way text merges of the overlapping files with PR363 succeed in both orders and retain both namespaces. No upstream merge was performed.
 
-- Before patch: 2 new cases pass, 11 fail on actual untranslated UI/state.
-- After patch: all 13 new cases pass; the existing form test also passes.
-- Full suite: 875 tests pass, zero fail, all 77 suites pass.
-- TypeScript: exit0, zero diagnostics.
-- ESLint: exit0, zero errors; 32 existing warnings elsewhere, none in changed files.
-- Default Next.js/Turbopack build: exit0.
-- All 263 tracked files compared byte-for-byte with the test copy, and the published tree matches the tested source. Existing tests, dictionary entries, dependencies and config are unchanged.
+## Fresh verification
 
-## Component checks
+- Standalone PR366: 878 tests pass, 0 fail, 77 suites. TypeScript, lint and default production build all exit0.
+- Temporary combined source from PR363, PR364, PR365 and the updated PR366: 904 tests pass, 0 fail, 80 suites. TypeScript, lint and default production build all exit0.
+- Both lint runs retain 32 pre-existing warnings; zero errors. No tests, dependencies, lockfile, compiler rules or source settings were relaxed.
+- Six nonpersistent WebKit component captures show the actual localized rate-limit error at desktop/mobile sizes in light/dark themes. Fetch is mocked; no production feedback was sent.
+- All tracked source files were compared against the validation copies after execution. The combined source manifest and provenance heads are included.
 
-Six native nonpersistent WebKit screenshots cover en/es/fr, light/dark and 390/900 pixel widths. Dialog and page bounds fit the tested viewports. Visible Charlotte exercise opened the Spanish dark form, entered synthetic feedback and observed translated success. The fetch boundary is mocked; no live feedback is submitted. These are component fixtures, not a deployed end-to-end test.
+Local environment: macOS arm64 / Node24.20.0 / isolated case-sensitive workspace using existing complete lockfile-matched dependencies. An initial cached production build timed out without a code diagnostic. Its generated cache was moved aside and the unchanged source passed a fresh default build. The timeout and successful retry logs are both retained; no claim is made that the cache was conclusively the only cause. Official Ubuntu/Node20 CI is separate and remains subject to maintainer approval.
 
-Local environment: macOS arm64, Node24.20.0, isolated case-sensitive workspace with the existing complete exact-lockfile dependencies reused. Official Ubuntu/Node20 CI is separate and not claimed to have passed.
+No source changes to PR363/364/365. No payment commitment or receipt is claimed; A$0 spent. AI-assisted implementation and testing; no independent human or native-speaker review claimed.
 
-Implementation, translation drafting, testing and review were AI-assisted. No independent human or native-speaker review is claimed. Assignment and reward eligibility were queried and remain unconfirmed. No payment amount, escrow, currency/network or receiver is promised. A$0 spent.
+## Prior evidence
+
+Root-level artifacts outside review-polish/ preserve the earlier PR366 revision and its original localization tests/screenshots. Current evidence is under review-polish/.

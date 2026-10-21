@@ -1,0 +1,4026 @@
+{
+  "numPassedTests": 904,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 80,
+  "numFailedTestSuites": 0,
+  "numTotalTests": 904,
+  "numPendingTests": 0,
+  "tests": [
+    {
+      "file": "[local-workspace]/src/audit-guard/__tests__/gasMonitor.test.ts",
+      "assertions": [
+        {
+          "name": "extractGasUsage reads every resource out of a simulation response",
+          "status": "passed"
+        },
+        {
+          "name": "extractGasUsage falls back to declared instructions when cost is absent",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas reports ok when every resource is well under its limit",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas flags a warning when a resource crosses the warn threshold",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas flags critical and records a violation when a limit is exceeded",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas treats usage at exactly the limit as a violation",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas honours custom limits and warn threshold",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas marks any positive usage as critical when its limit is zero",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGasFromSimulation estimates directly from a successful simulation",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGasFromSimulation throws GasMonitorError on a failed simulation",
+          "status": "passed"
+        },
+        {
+          "name": "simulateGas simulates then estimates",
+          "status": "passed"
+        },
+        {
+          "name": "simulateGas wraps simulator failures in GasMonitorError",
+          "status": "passed"
+        },
+        {
+          "name": "formatGas / formatGasLogMessage formats large numbers compactly",
+          "status": "passed"
+        },
+        {
+          "name": "formatGas / formatGasLogMessage summarises an estimate with severity and per-resource ratios",
+          "status": "passed"
+        },
+        {
+          "name": "logGasEstimate logs at error level for critical estimates and returns a timestamped record",
+          "status": "passed"
+        },
+        {
+          "name": "logGasEstimate logs at info level for ok estimates and warn level for warnings",
+          "status": "passed"
+        },
+        {
+          "name": "GasUsageMonitor records, logs, and retains estimates",
+          "status": "passed"
+        },
+        {
+          "name": "GasUsageMonitor monitors via a simulator and applies configured limits",
+          "status": "passed"
+        },
+        {
+          "name": "GasUsageMonitor clears retained history",
+          "status": "passed"
+        },
+        {
+          "name": "GasUsageMonitor caps retained history at maxHistory, dropping the oldest records",
+          "status": "passed"
+        },
+        {
+          "name": "GasUsageMonitor keeps history unbounded when maxHistory is non-positive",
+          "status": "passed"
+        },
+        {
+          "name": "GAS_RESOURCES coverage defines a default limit for every tracked resource",
+          "status": "passed"
+        },
+        {
+          "name": "formatGas \u2014 edge cases formats zero",
+          "status": "passed"
+        },
+        {
+          "name": "formatGas \u2014 edge cases formats values below 1 000 without a suffix",
+          "status": "passed"
+        },
+        {
+          "name": "formatGas \u2014 edge cases formats negative values",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas \u2014 additional boundary conditions reports ok when every resource is zero",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas \u2014 additional boundary conditions produces violations for every resource that exceeds its limit simultaneously",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas \u2014 additional boundary conditions severity stays critical even when some resources are only at warning level",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas \u2014 warnThreshold clamping clamps warnThreshold below 0 to 0, flagging any usage as warning",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas \u2014 warnThreshold clamping clamps warnThreshold above 1 to 1, so no warning is raised below the limit",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas \u2014 warnThreshold clamping falls back to DEFAULT_WARN_THRESHOLD when warnThreshold is NaN",
+          "status": "passed"
+        },
+        {
+          "name": "estimateGas \u2014 warnThreshold clamping falls back to DEFAULT_WARN_THRESHOLD when warnThreshold is Infinity",
+          "status": "passed"
+        },
+        {
+          "name": "formatGasLogMessage \u2014 completeness includes all 7 resources in the log message",
+          "status": "passed"
+        },
+        {
+          "name": "logGasEstimate \u2014 default logger uses consoleGasLogger when no logger is provided and does not throw",
+          "status": "passed"
+        },
+        {
+          "name": "logGasEstimate \u2014 default logger returns a record with correct fields when using the default logger",
+          "status": "passed"
+        },
+        {
+          "name": "GasUsageMonitor.estimate() returns a GasEstimate without logging or retaining a record",
+          "status": "passed"
+        },
+        {
+          "name": "GasUsageMonitor.estimate() throws GasMonitorError when the simulation failed",
+          "status": "passed"
+        },
+        {
+          "name": "GasUsageMonitor.violations() \u2014 empty when all calls are within limits returns an empty array when every recorded call is within limits",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/security/__tests__/vulnerabilityParser.test.ts",
+      "assertions": [
+        {
+          "name": "vulnerabilityParser parses valid scanner JSON and preserves scanner fields",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser returns a parser error for malformed JSON",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser normalizes scanner severity values safely",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser sanitizes malicious markup and sensitive values before returning findings",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser handles unknown or empty formats without crashing",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser parses SARIF-style scanner results",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser uses SARIF rule metadata when individual results omit display fields",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser parses nested Slither detector output from smart contract scans",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser parses Semgrep JSON and nested metadata safely",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser summarizes normalized findings",
+          "status": "passed"
+        },
+        {
+          "name": "vulnerabilityParser sanitizes display text independently",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping removes a simple script block with its content",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping removes nested/overlapping script tags that survive a single-pass replacement",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping removes a script tag with a malformed close tag (whitespace before >)",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping removes style tags together with their content",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping removes nested style inside script and vice-versa",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping strips residual HTML tags after script/style removal",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping strips HTML from surrounding safe text, preserving the safe text",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping strips control characters (U+0000\u2013U+001F range except tabs/newlines)",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping collapses multiple internal whitespace runs into a single space",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 nested and overlapping tag stripping returns undefined for a string that becomes empty after sanitization",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 non-string input types converts numbers to their string representation",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 non-string input types converts boolean true and false",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 non-string input types returns undefined for null, undefined, objects, and arrays",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 maxLength truncation boundary returns the full string when length equals maxLength",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 maxLength truncation boundary truncates to maxLength-1 chars plus \"...\" when length exceeds maxLength",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeDisplayText \u2014 maxLength truncation boundary does not truncate a string one char shorter than maxLength",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 numeric CVSS scores maps score 0 to info",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 numeric CVSS scores maps score > 0 and < 4 to low",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 numeric CVSS scores maps score 4 to medium",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 numeric CVSS scores maps score in 4\u20136.9 to medium",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 numeric CVSS scores maps score 7 to high",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 numeric CVSS scores maps score in 7\u20138.9 to high",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 numeric CVSS scores maps score 9 to critical",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 numeric CVSS scores maps score 10 to critical",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 alias strings maps \"blocker\" to critical",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 alias strings maps \"major\" to high",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 alias strings maps \"minor\" to low",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 alias strings maps \"informational\" to info",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 alias strings maps \"note\" to info",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 alias strings maps \"optimization\" to info",
+          "status": "passed"
+        },
+        {
+          "name": "normalizeSeverity \u2014 alias strings maps \"none\" to info",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeUrl (via parseVulnerabilityResults) \u2014 protocol filtering accepts http URLs",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeUrl (via parseVulnerabilityResults) \u2014 protocol filtering accepts https URLs",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeUrl (via parseVulnerabilityResults) \u2014 protocol filtering rejects javascript: URLs",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeUrl (via parseVulnerabilityResults) \u2014 protocol filtering rejects data: URLs",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeUrl (via parseVulnerabilityResults) \u2014 protocol filtering rejects ftp: URLs",
+          "status": "passed"
+        },
+        {
+          "name": "sanitizeUrl (via parseVulnerabilityResults) \u2014 protocol filtering rejects completely malformed non-URL strings",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/tests/wallet.test.tsx",
+      "assertions": [
+        {
+          "name": "WalletContext WalletProvider should render children",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext WalletProvider should initialize with loading state",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext useWallet hook should throw error when used outside WalletProvider",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext connect should connect wallet successfully with Freighter v6 requestAccess",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext connect should persist publicKey to localStorage on successful connection",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext connect should restore wallet from localStorage when it matches the current Freighter address",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext connect should clear stored wallet when Freighter is disconnected on restore",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext connect should clear stored wallet when it differs from the current Freighter address",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext connect should handle connection error when Freighter is not installed",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext connect should handle connection error from Freighter API",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext connect should set loading state during connection",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext disconnect should disconnect wallet",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext disconnect should remove publicKey from localStorage on disconnect",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext Freighter wallet watcher should disconnect on Freighter wallet changes",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext localStorage persistence should persist and restore connection across remounts when Freighter still exposes the same address",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/ProofViewer/__tests__/ProofHistoryTable.test.tsx",
+      "assertions": [
+        {
+          "name": "ProofHistoryTable loading state shows the loading indicator while proof history is being fetched",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable loading state removes the loading indicator after data arrives",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable error state displays an error message when the service rejects",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable error state uses the fallback error message when the error has no message string",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable error state does not render the table when in error state",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable table rendering renders the section heading",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable table rendering renders all column headers",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable table rendering renders a row for every proof record returned by the service",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable table rendering formats the ISO timestamp into a localised string",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable table rendering calls fetchProofHistory exactly once on mount",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable empty state renders the table structure with no data rows when the service returns an empty array",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable copy proof hash action calls navigator.clipboard.writeText with the correct proof hash",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable copy proof hash action copies the correct hash for each row independently",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable download proof action creates an object URL from the proof blob data",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable download proof action sets the correct download filename as <taskId>-<timestamp>.proof",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable download proof action revokes the object URL after triggering the download",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable edge cases renders a record whose proofBlob is an empty string without crashing",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable edge cases renders a record with a very long proofHash without layout errors",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable edge cases renders many records without crashing",
+          "status": "passed"
+        },
+        {
+          "name": "ProofHistoryTable edge cases survives a clipboard rejection silently (no thrown error, no UI change)",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/services/__tests__/txBuilder.test.ts",
+      "assertions": [
+        {
+          "name": "BatchTransactionBuilder builds one transaction containing multiple supplied operations",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder rejects an empty operation list",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder preserves operation order and does not mutate the input array",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder uses the supplied network passphrase for wallet signing",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder uses the correct next sequence number from loaded account state",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder does not increment local sequence cache when broadcast fails",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder returns broadcast result data after a successful signing flow",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder rejects invalid operation payloads without dropping them",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder updates local sequence only after successful broadcast and reuses it for the next transaction",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder invalidates local sequence cache and reports stale sequence on tx_bad_seq",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder requires a source account and network passphrase",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder surfaces wallet signing failures before broadcasting",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder wraps account load failures clearly",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder (Soroban) builds a Soroban transaction with simulation and assembly",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder (Soroban) rejects Soroban transactions with no invocations",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder (Soroban) fails when simulation returns an error",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder (Soroban) sends a signed Soroban transaction and returns the hash",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTransactionBuilder (Soroban) builds, signs, and sends in a single call (buildSorobanAndSend)",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/EmergencyHaltButton/__tests__/EmergencyHaltButton.test.tsx",
+      "assertions": [
+        {
+          "name": "EmergencyHaltButton Rendering states renders the button in ready state for admin with wallet connected",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Rendering states shows missing wallet state when no wallet connected",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Rendering states shows unauthorized state for non-admin users",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Confirmation flow shows confirmation dialog when button is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Confirmation flow cancels confirmation when cancel button is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Halt execution calls haltContract with correct parameters",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Halt execution emits event on successful halt",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Halt execution appends audit event on successful halt",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Halt execution shows success toast with transaction link",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Halt execution handles error when halt fails",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Halt execution appends audit event on halt failure",
+          "status": "passed"
+        },
+        {
+          "name": "EmergencyHaltButton Edge cases shows halting state while processing",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/AuditSessionTimer/__tests__/AuditSessionTimer.test.tsx",
+      "assertions": [
+        {
+          "name": "formatTime formats zero as 00:00",
+          "status": "passed"
+        },
+        {
+          "name": "formatTime formats 90 seconds as 01:30",
+          "status": "passed"
+        },
+        {
+          "name": "formatTime formats 25 minutes as 25:00",
+          "status": "passed"
+        },
+        {
+          "name": "formatTime clamps negative values to 00:00",
+          "status": "passed"
+        },
+        {
+          "name": "formatDuration formats seconds only when under a minute",
+          "status": "passed"
+        },
+        {
+          "name": "formatDuration formats whole minutes without seconds",
+          "status": "passed"
+        },
+        {
+          "name": "formatDuration formats mixed minutes and seconds",
+          "status": "passed"
+        },
+        {
+          "name": "formatDuration clamps negative values",
+          "status": "passed"
+        },
+        {
+          "name": "getRemainingSeconds returns full duration when elapsed is 0",
+          "status": "passed"
+        },
+        {
+          "name": "getRemainingSeconds returns 0 when elapsed equals duration",
+          "status": "passed"
+        },
+        {
+          "name": "getRemainingSeconds never returns a negative value",
+          "status": "passed"
+        },
+        {
+          "name": "getProgress returns 0 when nothing has elapsed",
+          "status": "passed"
+        },
+        {
+          "name": "getProgress returns 0.5 at the halfway point",
+          "status": "passed"
+        },
+        {
+          "name": "getProgress caps at 1 when over duration",
+          "status": "passed"
+        },
+        {
+          "name": "getProgress returns 0 when duration is 0",
+          "status": "passed"
+        },
+        {
+          "name": "tick does nothing when phase is not running",
+          "status": "passed"
+        },
+        {
+          "name": "tick increments elapsed by 1 each tick",
+          "status": "passed"
+        },
+        {
+          "name": "tick transitions to finished on the final tick",
+          "status": "passed"
+        },
+        {
+          "name": "tick adds a completed record to history on finish",
+          "status": "passed"
+        },
+        {
+          "name": "startSession transitions idle to running",
+          "status": "passed"
+        },
+        {
+          "name": "startSession transitions paused to running",
+          "status": "passed"
+        },
+        {
+          "name": "startSession is a no-op when already running",
+          "status": "passed"
+        },
+        {
+          "name": "pauseSession transitions running to paused",
+          "status": "passed"
+        },
+        {
+          "name": "pauseSession is a no-op when not running",
+          "status": "passed"
+        },
+        {
+          "name": "stopSession transitions running to idle and records elapsed",
+          "status": "passed"
+        },
+        {
+          "name": "stopSession is a no-op when already idle",
+          "status": "passed"
+        },
+        {
+          "name": "resetSession resets elapsed to 0 and phase to idle without adding history",
+          "status": "passed"
+        },
+        {
+          "name": "setDuration updates duration when idle",
+          "status": "passed"
+        },
+        {
+          "name": "setDuration is a no-op when not idle",
+          "status": "passed"
+        },
+        {
+          "name": "totalAuditedSeconds returns 0 for empty history",
+          "status": "passed"
+        },
+        {
+          "name": "totalAuditedSeconds sums elapsed seconds across all records",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer renders the heading",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer shows preset duration buttons",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer starts with the start button visible",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer hides presets and shows pause/stop after starting",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer shows resume and reset after pausing",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer counts down each second while running",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer shows finished state when time runs out",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer records a session in history after stopping early",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer calls onSessionEnd when a session completes",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer calls onSessionEnd with completed=false when stopped early",
+          "status": "passed"
+        },
+        {
+          "name": "AuditSessionTimer changing a preset updates the displayed duration",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/__tests__/FeedbackModal.i18n.test.tsx",
+      "assertions": [
+        {
+          "name": "FeedbackModal translations translates controls and accessible labels in en",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations translates controls and accessible labels in es",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations translates controls and accessible labels in fr",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations keeps canonical API rating values while showing en labels",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations keeps canonical API rating values while showing es labels",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations keeps canonical API rating values while showing fr labels",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations switches languages without losing form content or rating",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations localizes server error Feedback message is required. and updates it on language change",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations localizes server error Enter a valid email address. and updates it on language change",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations localizes server error Feedback submission failed. and updates it on language change",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations localizes server error Invalid feedback payload. and updates it on language change",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations localizes server error Unrecognized server message and updates it on language change",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations explains a rate-limit response and preserves retryable form state in en",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations explains a rate-limit response and preserves retryable form state in es",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations explains a rate-limit response and preserves retryable form state in fr",
+          "status": "passed"
+        },
+        {
+          "name": "FeedbackModal translations translates the disabled submitting state and eventual success",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/hooks/__tests__/useOnChainCache.test.ts",
+      "assertions": [
+        {
+          "name": "useOnChainCache starts empty when revalidateOnMount is false",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache fetches on mount and returns data",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache sets error when the fetcher rejects",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache mutate updates cached data optimistically",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache manually revalidate re-fetches data",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache shares cached data across hook instances with the same cache key",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache deduplicates concurrent requests within the dedup interval",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache calls onSuccess when fetch succeeds",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache calls onError when fetch fails",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache re-fetches when the chain state syncVersion increments",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache isValidating is true during background revalidation",
+          "status": "passed"
+        },
+        {
+          "name": "useOnChainCache returns correct syncVersion from useChainState",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/hooks/__tests__/usePlayback.test.ts",
+      "assertions": [
+        {
+          "name": "usePlayback initializes with empty history",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback initializes with provided history",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback positions at the last snapshot by default",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback goes to a specific index",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback clamps goTo to valid range",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback goes to start",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback goes to end",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback steps forward",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback steps backward",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback does not step forward beyond last index",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback does not step backward before first index",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback computes diff between consecutive snapshots",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback returns null diff at first index",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback returns null diff for single snapshot history",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback appends a snapshot to history",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback clears history",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback replaces history",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback replaces history with empty array",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback enforces max cache size on append",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback enforces max cache size on initial history",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback returns current snapshot",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback handles empty history gracefully",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback plays through snapshots",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback pauses playback",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback toggles play state",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback wraps to start when playing from end",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback changes playback speed",
+          "status": "passed"
+        },
+        {
+          "name": "usePlayback uses initialSpeed option",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/Layout/__tests__/Layout.test.tsx",
+      "assertions": [
+        {
+          "name": "Layout \u2014 children renders arbitrary children in the main content area",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 children renders multiple children",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 children renders with no children without throwing",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 branding renders the \"Vero\" brand title in the desktop sidebar",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 branding renders the \"Guardian\" subtitle in the sidebar",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 branding renders the \"Vero Guardian\" mobile brand label in the header",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 desktop navigation items renders all four navigation links in the sidebar",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 desktop navigation items renders the Dashboard navigation link",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 desktop navigation items renders the Validations navigation link",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 desktop navigation items renders the Tasks navigation link",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 desktop navigation items renders the Settings navigation link",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 desktop navigation items renders ConnectButton inside the header",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile menu toggle button renders a mobile menu toggle button",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile menu toggle button toggle button starts with aria-expanded=\"false\"",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile menu toggle button mobile navigation is NOT visible before the menu is opened",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile menu open/close opens the mobile menu when the toggle button is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile menu open/close sets aria-expanded to \"true\" when mobile menu is open",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile menu open/close changes the toggle button aria-label to \"Close menu\" when open",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile menu open/close closes the mobile menu when the toggle button is clicked again",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile menu open/close resets aria-expanded to \"false\" after closing",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile navigation content shows Dashboard link in the mobile navigation",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile navigation content shows Validations link in the mobile navigation",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile navigation content shows Tasks link in the mobile navigation",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 mobile navigation content shows Settings link in the mobile navigation",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 responsive structure renders a root element with min-h-screen class for full-height layout",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 responsive structure renders a sticky header element",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 responsive structure renders the desktop sidebar as an <aside> element",
+          "status": "passed"
+        },
+        {
+          "name": "Layout \u2014 responsive structure desktop sidebar carries the md:flex visibility class (hidden on mobile)",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/BatchTxBuilder/__tests__/batchTxBuilder.test.ts",
+      "assertions": [
+        {
+          "name": "emptyDraft creates a blank draft for each operation type",
+          "status": "passed"
+        },
+        {
+          "name": "createOperationId generates unique ids",
+          "status": "passed"
+        },
+        {
+          "name": "validateDraft accepts a well-formed vote",
+          "status": "passed"
+        },
+        {
+          "name": "validateDraft rejects a missing or non-numeric PR number",
+          "status": "passed"
+        },
+        {
+          "name": "validateDraft requires a data name within the byte limit",
+          "status": "passed"
+        },
+        {
+          "name": "validateDraft validates a payment destination and amount",
+          "status": "passed"
+        },
+        {
+          "name": "toStellarOperation maps a vote draft to a manageData operation",
+          "status": "passed"
+        },
+        {
+          "name": "toStellarOperation builds a native payment operation",
+          "status": "passed"
+        },
+        {
+          "name": "toStellarOperation throws on an invalid draft so it never reaches signing",
+          "status": "passed"
+        },
+        {
+          "name": "summarizeDraft describes each operation type",
+          "status": "passed"
+        },
+        {
+          "name": "shortenAddress truncates long addresses and leaves short ones intact",
+          "status": "passed"
+        },
+        {
+          "name": "removeOperation removes the matching operation only",
+          "status": "passed"
+        },
+        {
+          "name": "moveOperation swaps adjacent operations and preserves order at the edges",
+          "status": "passed"
+        },
+        {
+          "name": "emptyDraft (Soroban) creates a blank sorobanVote draft",
+          "status": "passed"
+        },
+        {
+          "name": "emptyDraft (Soroban) creates a blank sorobanHalt draft",
+          "status": "passed"
+        },
+        {
+          "name": "isSorobanDraft returns true for Soroban operation types",
+          "status": "passed"
+        },
+        {
+          "name": "isSorobanDraft returns false for classic operation types",
+          "status": "passed"
+        },
+        {
+          "name": "validateDraft (Soroban) accepts a well-formed sorobanVote",
+          "status": "passed"
+        },
+        {
+          "name": "validateDraft (Soroban) accepts a well-formed sorobanHalt",
+          "status": "passed"
+        },
+        {
+          "name": "validateDraft (Soroban) rejects sorobanVote with missing contract ID",
+          "status": "passed"
+        },
+        {
+          "name": "validateDraft (Soroban) rejects sorobanVote with non-numeric PR number",
+          "status": "passed"
+        },
+        {
+          "name": "validateDraft (Soroban) rejects sorobanHalt with invalid contract ID",
+          "status": "passed"
+        },
+        {
+          "name": "extractSorobanInvocation extracts vote invocation from sorobanVote draft",
+          "status": "passed"
+        },
+        {
+          "name": "extractSorobanInvocation extracts halt invocation from sorobanHalt draft",
+          "status": "passed"
+        },
+        {
+          "name": "summarizeDraft (Soroban) describes sorobanVote operation",
+          "status": "passed"
+        },
+        {
+          "name": "summarizeDraft (Soroban) describes sorobanHalt operation",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/ContractTimeTraveler/__tests__/ContractTimeTraveler.test.tsx",
+      "assertions": [
+        {
+          "name": "diffStates returns an empty array when states are identical",
+          "status": "passed"
+        },
+        {
+          "name": "diffStates detects a changed value",
+          "status": "passed"
+        },
+        {
+          "name": "diffStates detects an added key",
+          "status": "passed"
+        },
+        {
+          "name": "diffStates detects a removed key",
+          "status": "passed"
+        },
+        {
+          "name": "diffStates handles complex nested values via JSON comparison",
+          "status": "passed"
+        },
+        {
+          "name": "diffSnapshots returns isMatch:true when indices are equal",
+          "status": "passed"
+        },
+        {
+          "name": "diffSnapshots reports correct changes between two snapshots",
+          "status": "passed"
+        },
+        {
+          "name": "diffSnapshots returns an empty diff when history indices are out of bounds",
+          "status": "passed"
+        },
+        {
+          "name": "appendSnapshot appends a snapshot to the history",
+          "status": "passed"
+        },
+        {
+          "name": "appendSnapshot does not mutate the original array",
+          "status": "passed"
+        },
+        {
+          "name": "appendSnapshot caps the cache at MAX_SNAPSHOT_CACHE_SIZE",
+          "status": "passed"
+        },
+        {
+          "name": "formatSnapshotTime returns a compact human-readable string for a valid ISO date",
+          "status": "passed"
+        },
+        {
+          "name": "formatSnapshotTime falls back gracefully on an invalid timestamp",
+          "status": "passed"
+        },
+        {
+          "name": "formatStateValue renders null as a dash",
+          "status": "passed"
+        },
+        {
+          "name": "formatStateValue renders undefined as a dash",
+          "status": "passed"
+        },
+        {
+          "name": "formatStateValue renders numbers as strings",
+          "status": "passed"
+        },
+        {
+          "name": "formatStateValue renders booleans as strings",
+          "status": "passed"
+        },
+        {
+          "name": "formatStateValue renders objects as JSON",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler renders the heading",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler shows the empty state when history is empty",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler starts at the last snapshot (most recent state)",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler navigates to the previous snapshot when the previous button is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler navigates forward when the next button is clicked after going back",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler disables the previous button at the first snapshot",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler disables the next button at the last snapshot",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler shows a diff summary when moving away from the first snapshot",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler renders state keys for the selected snapshot",
+          "status": "passed"
+        },
+        {
+          "name": "ContractTimeTraveler works with a single-snapshot history (no diff shown)",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/ContractCallGraph/__tests__/ContractCallGraph.test.tsx",
+      "assertions": [
+        {
+          "name": "buildCytoscapeElements produces one element per node",
+          "status": "passed"
+        },
+        {
+          "name": "buildCytoscapeElements produces one element per edge",
+          "status": "passed"
+        },
+        {
+          "name": "buildCytoscapeElements copies node data fields correctly",
+          "status": "passed"
+        },
+        {
+          "name": "buildCytoscapeElements sets edge source and target correctly",
+          "status": "passed"
+        },
+        {
+          "name": "buildCytoscapeElements marks conditional edges",
+          "status": "passed"
+        },
+        {
+          "name": "buildCytoscapeElements returns empty arrays for an empty graph",
+          "status": "passed"
+        },
+        {
+          "name": "findRoots identifies nodes with no incoming edges",
+          "status": "passed"
+        },
+        {
+          "name": "findRoots returns all nodes when there are no edges",
+          "status": "passed"
+        },
+        {
+          "name": "findRoots returns an empty array for an empty graph",
+          "status": "passed"
+        },
+        {
+          "name": "findLeaves identifies nodes with no outgoing edges",
+          "status": "passed"
+        },
+        {
+          "name": "findLeaves returns all nodes when there are no edges",
+          "status": "passed"
+        },
+        {
+          "name": "computeInDegree returns zero in-degree for root nodes",
+          "status": "passed"
+        },
+        {
+          "name": "computeInDegree correctly counts multiple callers",
+          "status": "passed"
+        },
+        {
+          "name": "computeInDegree returns zero for all nodes when there are no edges",
+          "status": "passed"
+        },
+        {
+          "name": "getCallees returns direct callees of a node",
+          "status": "passed"
+        },
+        {
+          "name": "getCallees returns an empty array for a leaf node",
+          "status": "passed"
+        },
+        {
+          "name": "getCallers returns direct callers of a node",
+          "status": "passed"
+        },
+        {
+          "name": "getCallers returns an empty array for a root node",
+          "status": "passed"
+        },
+        {
+          "name": "ContractCallGraph renders the heading",
+          "status": "passed"
+        },
+        {
+          "name": "ContractCallGraph shows the empty state when graph has no nodes",
+          "status": "passed"
+        },
+        {
+          "name": "ContractCallGraph renders the stats strip with node and edge counts",
+          "status": "passed"
+        },
+        {
+          "name": "ContractCallGraph renders the cytoscape container div",
+          "status": "passed"
+        },
+        {
+          "name": "ContractCallGraph renders the legend with all four node kind labels",
+          "status": "passed"
+        },
+        {
+          "name": "ContractCallGraph renders toolbar buttons",
+          "status": "passed"
+        },
+        {
+          "name": "ContractCallGraph accepts a custom height prop",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/services/__tests__/push.test.ts",
+      "assertions": [
+        {
+          "name": "push encryption getPushEncryptionKey returns a CryptoKey",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption getPushEncryptionKey persists the key as JWK in localStorage",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption getPushEncryptionKey returns the same key on repeated calls (cached)",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption getPushEncryptionKey reloads the persisted key after cache is cleared",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption getPushEncryptionKey generates a new key when localStorage is empty",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption encryptData produces a JSON payload with iv and ciphertext fields",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption encryptData does not embed the plaintext in the output",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption encryptData + decryptData round-trips correctly",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption each encryptData call produces a different ciphertext (random IV)",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption decryptData throws on a legacy PBKDF2-format blob (raw base64, not JSON)",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption decryptData throws on JSON that lacks iv or ciphertext fields",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption savePushSubscription encrypts and getPushSubscription decrypts correctly",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption getPushSubscription returns null when nothing is stored",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption getPushSubscription returns null and clears storage for a legacy PBKDF2 blob",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption getPushSubscription returns null and clears storage when decryption fails (wrong key)",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption deletePushSubscription clears localStorage and calls DELETE /api/push",
+          "status": "passed"
+        },
+        {
+          "name": "push encryption deletePushSubscription accepts explicit endpoint parameter",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/__tests__/TaskCard.test.tsx",
+      "assertions": [
+        {
+          "name": "matchesFilter returns true when both filters are \"all\"",
+          "status": "passed"
+        },
+        {
+          "name": "matchesFilter filters by status",
+          "status": "passed"
+        },
+        {
+          "name": "matchesFilter filters by priority",
+          "status": "passed"
+        },
+        {
+          "name": "matchesFilter combines status and priority filters",
+          "status": "passed"
+        },
+        {
+          "name": "matchesFilter resolves is_done as completed",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard renders a pending task title and action button from payload data",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard shows the vote count",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard hides the action button when the task is done",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard applies optimistic status and increments vote count on click, then resolves",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard promotes pending to in-progress optimistically",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard reverts optimistic changes and shows error toast on failure",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard sorts completed tasks to the bottom",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard renders filter controls",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard applies URL search param filters on render",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard shows no results message when filters match nothing",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard shows clear filters link when filter is active",
+          "status": "passed"
+        },
+        {
+          "name": "TaskCard clears filters via router replace when clear is clicked",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/VoteButton/__tests__/VoteButton.test.tsx",
+      "assertions": [
+        {
+          "name": "VoteButton lets a connected authorized role cast a vote",
+          "status": "passed"
+        },
+        {
+          "name": "VoteButton is disabled when no wallet is connected",
+          "status": "passed"
+        },
+        {
+          "name": "VoteButton is disabled for an unauthorized role and does not vote",
+          "status": "passed"
+        },
+        {
+          "name": "VoteButton is disabled while role data is loading",
+          "status": "passed"
+        },
+        {
+          "name": "VoteButton shows Loader2 spinner and \"Signing\u2026\" label in PENDING state",
+          "status": "passed"
+        },
+        {
+          "name": "VoteButton shows success notification with explorer link after a successful vote",
+          "status": "passed"
+        },
+        {
+          "name": "VoteButton shows a network error notification when the vote fails with a contract error",
+          "status": "passed"
+        },
+        {
+          "name": "VoteButton shows a user rejection notification when Freighter is declined",
+          "status": "passed"
+        },
+        {
+          "name": "VoteButton clears the error notification when the dismiss button is clicked",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/NetworkStatus/__tests__/NetworkStatus.test.tsx",
+      "assertions": [
+        {
+          "name": "fetchRpcHealth classifies a healthy getHealth response with measured latency",
+          "status": "passed"
+        },
+        {
+          "name": "fetchRpcHealth classifies invalid JSON from a reachable RPC as degraded and logs context",
+          "status": "passed"
+        },
+        {
+          "name": "NetworkStatus transitions from healthy to offline on the next heartbeat failure",
+          "status": "passed"
+        },
+        {
+          "name": "NetworkStatus marks a hung heartbeat offline before the next polling interval",
+          "status": "passed"
+        },
+        {
+          "name": "NetworkStatus marks an RPC with a stalled health body offline before the next polling interval",
+          "status": "passed"
+        },
+        {
+          "name": "NetworkStatus ignores stale heartbeat responses after a newer offline result",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx",
+      "assertions": [
+        {
+          "name": "parseProposalXdr decodes a valid XDR",
+          "status": "passed"
+        },
+        {
+          "name": "parseProposalXdr throws on invalid XDR",
+          "status": "passed"
+        },
+        {
+          "name": "parseProposalXdr includes sequence number",
+          "status": "passed"
+        },
+        {
+          "name": "computeThreshold met=false when no signers have signed",
+          "status": "passed"
+        },
+        {
+          "name": "computeThreshold met=true when cumulative weight meets threshold",
+          "status": "passed"
+        },
+        {
+          "name": "computeThreshold only counts signed entries",
+          "status": "passed"
+        },
+        {
+          "name": "computeThreshold met=true when weight exceeds threshold",
+          "status": "passed"
+        },
+        {
+          "name": "computeThreshold current=0 for empty signers",
+          "status": "passed"
+        },
+        {
+          "name": "simulateProposal returns success=true on a successful simulation",
+          "status": "passed"
+        },
+        {
+          "name": "simulateProposal returns success=false for invalid XDR",
+          "status": "passed"
+        },
+        {
+          "name": "simulateProposal returns success=false when simulateTransaction rejects",
+          "status": "passed"
+        },
+        {
+          "name": "simulateProposal returns success=false when response contains error field",
+          "status": "passed"
+        },
+        {
+          "name": "simulateProposal falls back to tx fee when minResourceFee is missing",
+          "status": "passed"
+        },
+        {
+          "name": "MultiSigPreviewer renders the heading",
+          "status": "passed"
+        },
+        {
+          "name": "MultiSigPreviewer disables the Preview button when XDR is empty",
+          "status": "passed"
+        },
+        {
+          "name": "MultiSigPreviewer enables Preview button when XDR is entered",
+          "status": "passed"
+        },
+        {
+          "name": "MultiSigPreviewer shows a parse error for invalid XDR",
+          "status": "passed"
+        },
+        {
+          "name": "MultiSigPreviewer shows proposal details after parsing a valid XDR",
+          "status": "passed"
+        },
+        {
+          "name": "MultiSigPreviewer shows signer weight section after preview",
+          "status": "passed"
+        },
+        {
+          "name": "MultiSigPreviewer adds a signer row when Add signer is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "MultiSigPreviewer reuses the same DOM node for a signer after removing another",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/TransactionFeed/__tests__/TransactionFeed.test.tsx",
+      "assertions": [
+        {
+          "name": "toFeedTransaction maps Horizon record fields, reading ledger from ledger_attr",
+          "status": "passed"
+        },
+        {
+          "name": "toFeedTransaction applies safe defaults for missing optional fields",
+          "status": "passed"
+        },
+        {
+          "name": "truncateMiddle shortens long values and leaves short ones intact",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionFeed renders the heading and an empty listening state, going live on subscribe",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionFeed renders a streamed transaction with an explorer link, ledger and op count",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionFeed prepends newest transactions and caps the feed at maxEntries",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionFeed ignores duplicate transaction ids",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionFeed shows a failed icon label for unsuccessful transactions",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionFeed surfaces a disconnected status and message on stream error",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionFeed unsubscribes from the stream on unmount",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/TransactionNotification/__tests__/TransactionNotification.test.tsx",
+      "assertions": [
+        {
+          "name": "TransactionNotification idle state renders nothing when status is idle",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification pending state renders a status region with aria-live=\"polite\"",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification pending state shows the pending message",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification pending state includes a spinner svg icon",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification success state renders a status region with aria-live=\"polite\"",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification success state shows the success message",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification success state renders an explorer link pointing to the correct URL",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification success state explorer link opens in a new tab with rel=\"noopener noreferrer\"",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification success state includes a success svg icon with aria-hidden=\"true\"",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification error state \u2014 network error renders an alert region with aria-live=\"assertive\"",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification error state \u2014 network error shows the network error message",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification error state \u2014 network error does not show the user-rejected message for a network error",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification error state \u2014 network error includes an error svg icon with aria-hidden=\"true\"",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification error state \u2014 user rejected shows the user-rejected message",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification error state \u2014 user rejected does not show the network error message for a user rejection",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification dismiss button renders a dismiss button when onDismiss is provided in error state",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification dismiss button calls onDismiss when the dismiss button is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification dismiss button does not render a dismiss button when onDismiss is not provided",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification dismiss button does not render a dismiss button in pending state",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification dismiss button does not render a dismiss button in success state",
+          "status": "passed"
+        },
+        {
+          "name": "TransactionNotification success state without txHash renders nothing when status is success but txHash is null",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/timer/__tests__/SessionTimer.i18n.test.tsx",
+      "assertions": [
+        {
+          "name": "SessionTimer translations (#159) translates every state and accessible label in en",
+          "status": "passed"
+        },
+        {
+          "name": "SessionTimer translations (#159) translates every state and accessible label in es",
+          "status": "passed"
+        },
+        {
+          "name": "SessionTimer translations (#159) translates every state and accessible label in fr",
+          "status": "passed"
+        },
+        {
+          "name": "SessionTimer translations (#159) changes language live without restarting a running or paused session",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/search/__tests__/useSearchIndex.test.tsx",
+      "assertions": [
+        {
+          "name": "useSearchIndex Hook initialization should initialize with empty state",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook initialization should initialize with contracts",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook search should return empty results for empty query",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook search should find contracts by name",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook search should support search options",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook search should filter by type",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook addContracts should add new contracts",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook addContracts should not add duplicate contracts",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook addContracts should enable search after adding contracts",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook removeContracts should remove contracts",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook updateContracts should update existing contracts",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook clearIndex should clear all contracts and index",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook localStorage persistence should persist contracts to localStorage",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook localStorage persistence should load contracts from localStorage",
+          "status": "passed"
+        },
+        {
+          "name": "useSearchIndex Hook error handling should handle search errors gracefully",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/search/__tests__/indexer.test.ts",
+      "assertions": [
+        {
+          "name": "Search Indexer createEmptyIndex should create empty index",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer buildTokenMap should build token map from contracts",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer buildTokenMap should include contract tokens",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer buildTokenMap should include function tokens",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer buildTokenMap should map tokens to contract/function IDs",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer buildIndex should build complete index",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer searchIndex should return empty results for empty query",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer searchIndex should find contracts by name",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer searchIndex should find contracts by type",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer searchIndex should find functions",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer searchIndex should filter by type",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer searchIndex should respect minScore",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer searchIndex should limit results",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer searchIndex should rank results by score",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer getContractsByType should get contracts by type",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer getContractsByType should return empty array for unknown type",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer getContractTypes should get all contract types",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer getContractTypes should return sorted types",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer validateIndex should validate valid index",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer validateIndex should detect missing fields",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer validateIndex should detect duplicate contract IDs",
+          "status": "passed"
+        },
+        {
+          "name": "Search Indexer validateIndex should detect duplicate function IDs",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/utils/__tests__/logger.test.ts",
+      "assertions": [
+        {
+          "name": "audit logger appends, buffers, flushes, and restores encrypted audit events",
+          "status": "passed"
+        },
+        {
+          "name": "audit logger uses monotonic sequence numbers for local ordering",
+          "status": "passed"
+        },
+        {
+          "name": "audit logger redacts sensitive metadata and survives circular values",
+          "status": "passed"
+        },
+        {
+          "name": "audit logger persists encrypted records without plaintext event contents",
+          "status": "passed"
+        },
+        {
+          "name": "audit logger verifies unchanged logs and rejects tampered or reordered logs",
+          "status": "passed"
+        },
+        {
+          "name": "audit logger exports the expected encrypted local file structure",
+          "status": "passed"
+        },
+        {
+          "name": "audit logger flushes the in-memory buffer to bounded encrypted storage",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/security/__tests__/RelayerVault.test.tsx",
+      "assertions": [
+        {
+          "name": "RelayerVault Component renders status tab and fetches vault status on mount",
+          "status": "passed"
+        },
+        {
+          "name": "RelayerVault Component renders warnings if configured key is exposed as raw secret",
+          "status": "passed"
+        },
+        {
+          "name": "RelayerVault Component shows a retryable error when the status request is not successful",
+          "status": "passed"
+        },
+        {
+          "name": "RelayerVault Component shows a retryable error when fetching status rejects",
+          "status": "passed"
+        },
+        {
+          "name": "RelayerVault Component allows tab switching",
+          "status": "passed"
+        },
+        {
+          "name": "RelayerVault Component handles encrypt action and displays record",
+          "status": "passed"
+        },
+        {
+          "name": "RelayerVault Component handles verify retrieval action and displays success state",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/VoteProgressBar/__tests__/VoteProgressBar.test.tsx",
+      "assertions": [
+        {
+          "name": "VoteProgressBar summary row rendering displays approve and reject counts",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar summary row rendering shows correct approve percentage when votes exist",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar summary row rendering shows 0% for both sides when there are no votes",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar summary row rendering shows 100% approve and 0% reject when all votes approve",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar summary row rendering shows 0% approve and 100% reject when all votes reject",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar summary row rendering rounds to 50% each for a tie",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar summary row rendering displays the approve and reject labels",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar chart rendering renders the bar chart container",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar quorum indicator does not render a quorum message when quorum prop is omitted",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar quorum indicator shows \"Quorum reached\" when approveCount meets quorum",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar quorum indicator shows \"Quorum reached\" when approveCount exceeds quorum",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar quorum indicator shows votes still needed when approveCount is below quorum",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar quorum indicator shows 1 vote needed when exactly one away from quorum",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar quorum indicator shows quorum needed message when approveCount is 0 and quorum is set",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar accessibility renders the root element with an aria-label describing the vote counts",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar accessibility renders the quorum indicator with aria-live=\"polite\"",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar accessibility the \"Quorum reached\" element also has aria-live=\"polite\"",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar edge cases renders without crashing when both counts are 0",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar edge cases renders without crashing for very large vote counts",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar edge cases handles a quorum of 0 (edge: quorum already met at any count)",
+          "status": "passed"
+        },
+        {
+          "name": "VoteProgressBar edge cases renders correctly with approveCount=1 rejectCount=0",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/security/__tests__/AuditExport.test.tsx",
+      "assertions": [
+        {
+          "name": "CSV Sanitization function does not modify safe inputs",
+          "status": "passed"
+        },
+        {
+          "name": "CSV Sanitization function returns empty string for null or undefined",
+          "status": "passed"
+        },
+        {
+          "name": "CSV Sanitization function prepends a single quote to prevent CSV formula injection",
+          "status": "passed"
+        },
+        {
+          "name": "CSV Sanitization function handles objects by stringifying and sanitizing if necessary",
+          "status": "passed"
+        },
+        {
+          "name": "AuditExport Component renders initial state with correct record count",
+          "status": "passed"
+        },
+        {
+          "name": "AuditExport Component disables export button if record count is 0",
+          "status": "passed"
+        },
+        {
+          "name": "AuditExport Component handles successful CSV export and triggers download",
+          "status": "passed"
+        },
+        {
+          "name": "AuditExport Component displays error message if decryption or export fails",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/BatchTxBuilder/__tests__/BatchTxBuilder.test.tsx",
+      "assertions": [
+        {
+          "name": "BatchTxBuilder queues multiple operations in local state",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTxBuilder disables Add until the draft is valid and shows why",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTxBuilder removes a queued operation",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTxBuilder reorders operations with the move controls",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTxBuilder builds and broadcasts the queue as one transaction",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTxBuilder surfaces broadcast failures and keeps the queue intact",
+          "status": "passed"
+        },
+        {
+          "name": "BatchTxBuilder disables broadcasting when the wallet is disconnected",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/services/__tests__/roleClient.test.ts",
+      "assertions": [
+        {
+          "name": "fetchUserRole returns admin for an exact admin marker on the connected account",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole returns guardian for an exact guardian marker on the connected account",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole returns admin when exact admin and guardian role signals both exist",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole uses an exact role data value from the connected account",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole returns admin for a registry admin marker scoped to the public key",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole returns guardian for a registry guardian marker scoped to the public key",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole uses a registry role data value scoped to the public key",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole returns admin when registry admin and guardian role signals both exist",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole ignores false and inactive role markers",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole explicitly protects the self-account admin fallback",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole explicitly protects the self-account guardian fallback",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole returns admin for an admin underscore marker scoped to the public key",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole ignores malformed account data values",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole returns unauthorized when data_attr is absent",
+          "status": "passed"
+        },
+        {
+          "name": "fetchUserRole returns unauthorized when no role data exists",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx",
+      "assertions": [
+        {
+          "name": "isValidIpfsHash accepts a valid CIDv0 (Qm...)",
+          "status": "passed"
+        },
+        {
+          "name": "isValidIpfsHash accepts a valid CIDv1 (bafy...)",
+          "status": "passed"
+        },
+        {
+          "name": "isValidIpfsHash rejects an empty string",
+          "status": "passed"
+        },
+        {
+          "name": "isValidIpfsHash rejects a hash that is too short",
+          "status": "passed"
+        },
+        {
+          "name": "isValidIpfsHash rejects an arbitrary string",
+          "status": "passed"
+        },
+        {
+          "name": "isValidIpfsHash rejects a hash with invalid characters",
+          "status": "passed"
+        },
+        {
+          "name": "buildGatewayUrl uses the default gateway when none is provided",
+          "status": "passed"
+        },
+        {
+          "name": "buildGatewayUrl uses a custom gateway when provided",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer renders the heading",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer shows the empty state when no hash is set",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer shows no iframe on initial render without initialHash",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer renders an iframe when a valid initialHash is provided",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer disables the Load button when the input is empty",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer disables the Load button for an invalid hash",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer enables the Load button for a valid CIDv0",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer enables the Load button for a valid CIDv1",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer shows a validation error for an invalid hash after typing",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer does not show a validation error when input is empty",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer loads the iframe after clicking Load with a valid hash",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer uses a custom gateway when provided",
+          "status": "passed"
+        },
+        {
+          "name": "IPFSDocViewer trims whitespace from input before validating",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/lib/__tests__/rate-limit.test.ts",
+      "assertions": [
+        {
+          "name": "getClientIp returns the first IP from x-forwarded-for",
+          "status": "passed"
+        },
+        {
+          "name": "getClientIp returns \"unknown\" when header is absent",
+          "status": "passed"
+        },
+        {
+          "name": "createRateLimiter \u2014 within limit returns null for requests below the limit",
+          "status": "passed"
+        },
+        {
+          "name": "createRateLimiter \u2014 within limit independent IPs do not share counters",
+          "status": "passed"
+        },
+        {
+          "name": "createRateLimiter \u2014 limit exceeded returns a 429 response once limit is exceeded",
+          "status": "passed"
+        },
+        {
+          "name": "createRateLimiter \u2014 limit exceeded 429 response includes Retry-After and RateLimit-* headers",
+          "status": "passed"
+        },
+        {
+          "name": "createRateLimiter \u2014 limit exceeded continues to return 429 for subsequent requests over the limit",
+          "status": "passed"
+        },
+        {
+          "name": "/api/push rate limiting (end-to-end wiring) POST route handler is importable and returns 400 for missing subscription",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/services/__tests__/haltContract.test.ts",
+      "assertions": [
+        {
+          "name": "haltContract prepared-transaction serialization uses the actual SDK builder interface, which has no toXDR method",
+          "status": "passed"
+        },
+        {
+          "name": "haltContract prepared-transaction serialization builds the prepared transaction before passing XDR to freighter",
+          "status": "passed"
+        },
+        {
+          "name": "haltContract prepared-transaction serialization builds the prepared transaction before passing XDR to rabet",
+          "status": "passed"
+        },
+        {
+          "name": "haltContract prepared-transaction serialization stops before assembly or wallet calls when simulation returns an error",
+          "status": "passed"
+        },
+        {
+          "name": "haltContract prepared-transaction serialization propagates an assembly failure without requesting a signature",
+          "status": "passed"
+        },
+        {
+          "name": "haltContract prepared-transaction serialization retains the unsupported-provider error",
+          "status": "passed"
+        },
+        {
+          "name": "haltContract prepared-transaction serialization does not send when the mocked signer rejects",
+          "status": "passed"
+        },
+        {
+          "name": "haltContract prepared-transaction serialization retains the error for an unsuccessful mocked send result",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/DiffEngine/__tests__/DiffEngine.test.tsx",
+      "assertions": [
+        {
+          "name": "DiffEngine renders the heading",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine renders the ABI and Bytecode comparison sections",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine reports no drift when ABI and bytecode both match",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine flags drift when the ABI definitions differ",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine flags drift when the bytecode differs",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine treats empty inputs as matching (no drift)",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine ignores HTML formatting around the ABI when comparing",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine strips script tags so a wrapped ABI still compares against the repo ABI",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine survives overlapping HTML tags by reapplying the strip pattern",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine trims surrounding whitespace from bytecode before comparing",
+          "status": "passed"
+        },
+        {
+          "name": "DiffEngine recomputes the diff when the inputs change",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/search/__tests__/fuzzySearch.test.ts",
+      "assertions": [
+        {
+          "name": "Fuzzy Search normalizeText should lowercase text",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search normalizeText should handle separators",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search normalizeText should trim whitespace",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search normalizeText should handle multiple spaces",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search tokenize should split text into tokens",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search tokenize should handle separators",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search tokenize should return empty array for empty text",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search levenshteinDistance should return 0 for identical strings",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search levenshteinDistance should calculate distance for different strings",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search levenshteinDistance should handle empty strings",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search tokenSimilarity should return 100 for exact match",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search tokenSimilarity should return 85 for starts-with match",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search tokenSimilarity should return 70 for contains match",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search tokenSimilarity should calculate fuzzy match score",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search tokenSimilarity should return 0 for no match",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search fuzzyMatchToken should find best match in tokens",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search fuzzyMatchToken should handle empty haystack",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search fuzzyMatchToken should handle empty query",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search fuzzyMatch should match query to haystack",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search fuzzyMatch should handle multi-token queries",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search fuzzyMatch should return 0 for no match",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search positionWeightedMatch should boost matches at beginning",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search positionWeightedMatch should boost early matches",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search multiFieldFuzzyMatch should search multiple fields",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search multiFieldFuzzyMatch should weight fields appropriately",
+          "status": "passed"
+        },
+        {
+          "name": "Fuzzy Search multiFieldFuzzyMatch should apply custom weights",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/auth/__tests__/session.test.ts",
+      "assertions": [
+        {
+          "name": "session encryption and management encryptSessionData and decryptSessionData encrypts and decrypts strings correctly",
+          "status": "passed"
+        },
+        {
+          "name": "session encryption and management setSessionItem encrypts and getSessionItem decrypts correctly from localStorage",
+          "status": "passed"
+        },
+        {
+          "name": "session encryption and management getSessionItem falls back to plain text for unencrypted legacy values",
+          "status": "passed"
+        },
+        {
+          "name": "session encryption and management removeSessionItem deletes key from localStorage",
+          "status": "passed"
+        },
+        {
+          "name": "session encryption and management SessionManager notifies subscribers on logout",
+          "status": "passed"
+        },
+        {
+          "name": "session encryption and management SessionManager triggers logout after 15 minutes of inactivity",
+          "status": "passed"
+        },
+        {
+          "name": "session encryption and management SessionManager activity reset updates last active timestamp",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/lib/__tests__/push-store.test.ts",
+      "assertions": [
+        {
+          "name": "PushSubscriptionStore saves and retrieves a subscription",
+          "status": "passed"
+        },
+        {
+          "name": "PushSubscriptionStore throws when saving a subscription with missing or empty endpoint",
+          "status": "passed"
+        },
+        {
+          "name": "PushSubscriptionStore updates an existing subscription with the same endpoint",
+          "status": "passed"
+        },
+        {
+          "name": "PushSubscriptionStore persists data to disk and reloads on new store instance",
+          "status": "passed"
+        },
+        {
+          "name": "PushSubscriptionStore deletes a subscription by endpoint",
+          "status": "passed"
+        },
+        {
+          "name": "PushSubscriptionStore delete returns false if endpoint does not exist",
+          "status": "passed"
+        },
+        {
+          "name": "PushSubscriptionStore clears all subscriptions",
+          "status": "passed"
+        },
+        {
+          "name": "PushSubscriptionStore handles corrupt JSON on disk gracefully by initializing an empty store",
+          "status": "passed"
+        },
+        {
+          "name": "PushSubscriptionStore in-memory mode (persistToDisk: false) operates without creating a file",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/app/api/push/route.test.ts",
+      "assertions": [
+        {
+          "name": "/api/push POST stores subscription and returns count",
+          "status": "passed"
+        },
+        {
+          "name": "/api/push POST rejects missing subscription or missing endpoint",
+          "status": "passed"
+        },
+        {
+          "name": "/api/push GET returns subscription count",
+          "status": "passed"
+        },
+        {
+          "name": "/api/push DELETE removes subscription via body endpoint",
+          "status": "passed"
+        },
+        {
+          "name": "/api/push DELETE removes subscription via URL query parameter",
+          "status": "passed"
+        },
+        {
+          "name": "/api/push DELETE returns 400 if endpoint is missing",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/services/__tests__/socketClient.test.ts",
+      "assertions": [
+        {
+          "name": "socketClient connects with URL from env var",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient connects with a custom URL",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient passes auth token when provided",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient throws when no URL is configured",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient returns connection status",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient notifies status listeners",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient notifies event listeners on any event",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient notifies error listeners on connect_error",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient emits events",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient disconnects and resets",
+          "status": "passed"
+        },
+        {
+          "name": "socketClient reset cleans all listeners",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/hooks/__tests__/useSocketIO.test.ts",
+      "assertions": [
+        {
+          "name": "useSocketIO returns initial disconnected status",
+          "status": "passed"
+        },
+        {
+          "name": "useSocketIO connects on autoConnect by default",
+          "status": "passed"
+        },
+        {
+          "name": "useSocketIO respects autoConnect=false",
+          "status": "passed"
+        },
+        {
+          "name": "useSocketIO connect function triggers connection",
+          "status": "passed"
+        },
+        {
+          "name": "useSocketIO disconnect function disconnects",
+          "status": "passed"
+        },
+        {
+          "name": "useSocketIO receives lastEvent when Socket.IO event fires",
+          "status": "passed"
+        },
+        {
+          "name": "useSocketIO calls invalidateChainState on events",
+          "status": "passed"
+        },
+        {
+          "name": "useSocketIO invokes useEvents emit when events arrive",
+          "status": "passed"
+        },
+        {
+          "name": "useSocketIO updateToken calls socket client updateAuthToken",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/tests/audit-viewer.test.tsx",
+      "assertions": [
+        {
+          "name": "AuditViewer Component renders the loading state initially",
+          "status": "passed"
+        },
+        {
+          "name": "AuditViewer Component renders the error state when the API call fails",
+          "status": "passed"
+        },
+        {
+          "name": "AuditViewer Component renders the fallback error message if no message is provided on failure",
+          "status": "passed"
+        },
+        {
+          "name": "AuditViewer Component renders the unavailable state when API returns null",
+          "status": "passed"
+        },
+        {
+          "name": "AuditViewer Component renders PR data correctly with a Match badge when hashes are identical",
+          "status": "passed"
+        },
+        {
+          "name": "AuditViewer Component renders PR data with a Mismatch badge when hashes differ",
+          "status": "passed"
+        },
+        {
+          "name": "AuditViewer Component calls generateAuditPDF with correct data when download button is clicked",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/GasHeatmap/__tests__/GasHeatmap.test.tsx",
+      "assertions": [
+        {
+          "name": "formatGas formats small and large values compactly",
+          "status": "passed"
+        },
+        {
+          "name": "buildHeatmap produces a function-by-metric grid",
+          "status": "passed"
+        },
+        {
+          "name": "buildHeatmap normalises intensity per metric column",
+          "status": "passed"
+        },
+        {
+          "name": "buildHeatmap marks zero-valued columns with zero intensity and no hotspot",
+          "status": "passed"
+        },
+        {
+          "name": "findHotspots returns the most expensive function per metric",
+          "status": "passed"
+        },
+        {
+          "name": "findHotspots omits metrics whose values are all zero",
+          "status": "passed"
+        },
+        {
+          "name": "GasHeatmap component renders the heading and a cell for every function/metric pair",
+          "status": "passed"
+        },
+        {
+          "name": "GasHeatmap component flags one hotspot cell per non-empty metric",
+          "status": "passed"
+        },
+        {
+          "name": "GasHeatmap component renders metric column labels and function row labels",
+          "status": "passed"
+        },
+        {
+          "name": "GasHeatmap component renders a hotspots summary section",
+          "status": "passed"
+        },
+        {
+          "name": "GasHeatmap component falls back to the default dataset when no data prop is given",
+          "status": "passed"
+        },
+        {
+          "name": "GasHeatmap component renders an empty state when there is no data",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/ReputationSimulator/__tests__/reputationSimulator.test.ts",
+      "assertions": [
+        {
+          "name": "clampScore clamps below minimum to 0",
+          "status": "passed"
+        },
+        {
+          "name": "clampScore clamps above maximum to MAX_REPUTATION",
+          "status": "passed"
+        },
+        {
+          "name": "clampScore truncates fractional values",
+          "status": "passed"
+        },
+        {
+          "name": "clampScore passes valid mid-range values through",
+          "status": "passed"
+        },
+        {
+          "name": "simulateScoreImpact adds correct delta for approve_vote",
+          "status": "passed"
+        },
+        {
+          "name": "simulateScoreImpact subtracts correct delta for dispute_vote",
+          "status": "passed"
+        },
+        {
+          "name": "simulateScoreImpact scales linearly with count",
+          "status": "passed"
+        },
+        {
+          "name": "simulateScoreImpact clamps projected score to MIN_REPUTATION when result would go negative",
+          "status": "passed"
+        },
+        {
+          "name": "simulateScoreImpact clamps projected score to MAX_REPUTATION on overflow",
+          "status": "passed"
+        },
+        {
+          "name": "simulateScoreImpact treats fractional count as truncated integer",
+          "status": "passed"
+        },
+        {
+          "name": "simulateScoreImpact returns zero delta for count of 0",
+          "status": "passed"
+        },
+        {
+          "name": "simulateMultipleActions combines deltas from multiple actions",
+          "status": "passed"
+        },
+        {
+          "name": "simulateMultipleActions handles mixed positive and negative actions",
+          "status": "passed"
+        },
+        {
+          "name": "simulateMultipleActions clamps to 0 when negative actions exceed current score",
+          "status": "passed"
+        },
+        {
+          "name": "simulateMultipleActions returns current score unchanged for empty actions map",
+          "status": "passed"
+        },
+        {
+          "name": "simulateMultipleActions sanitizes fractional counts in action map",
+          "status": "passed"
+        },
+        {
+          "name": "ACTION_DELTAS constants all values are non-zero integers",
+          "status": "passed"
+        },
+        {
+          "name": "ACTION_DELTAS constants dispute_vote is negative (penalty)",
+          "status": "passed"
+        },
+        {
+          "name": "ACTION_DELTAS constants complete_audit has the highest positive delta",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/security/__tests__/SecurityScannerResults.test.tsx",
+      "assertions": [
+        {
+          "name": "SecurityScannerResults renders scanner warnings that match the parsed output",
+          "status": "passed"
+        },
+        {
+          "name": "SecurityScannerResults visibly highlights critical findings",
+          "status": "passed"
+        },
+        {
+          "name": "SecurityScannerResults renders a parser error for malformed JSON without crashing",
+          "status": "passed"
+        },
+        {
+          "name": "SecurityScannerResults renders an empty state when no findings exist",
+          "status": "passed"
+        },
+        {
+          "name": "SecurityScannerResults sanitizes malicious scanner text and does not render it as HTML",
+          "status": "passed"
+        },
+        {
+          "name": "SecurityScannerResults parses local textarea input only from the current JSON value",
+          "status": "passed"
+        },
+        {
+          "name": "SecurityScannerResults exposes parsed findings, counts, and parse errors through the snapshot helper",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/services/__tests__/contractClient.test.ts",
+      "assertions": [
+        {
+          "name": "castVote returns transaction hash on success (Freighter default)",
+          "status": "passed"
+        },
+        {
+          "name": "castVote returns transaction hash on success using Rabet",
+          "status": "passed"
+        },
+        {
+          "name": "castVote propagates Horizon submission errors",
+          "status": "passed"
+        },
+        {
+          "name": "castVote propagates signing errors",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx",
+      "assertions": [
+        {
+          "name": "buildTourSteps returns 5 steps",
+          "status": "passed"
+        },
+        {
+          "name": "buildTourSteps first step has no attachTo (welcome modal)",
+          "status": "passed"
+        },
+        {
+          "name": "buildTourSteps each subsequent step has an attachTo with element and on",
+          "status": "passed"
+        },
+        {
+          "name": "buildTourSteps all steps have id, title, and text",
+          "status": "passed"
+        },
+        {
+          "name": "buildTourSteps step ids are unique",
+          "status": "passed"
+        },
+        {
+          "name": "buildTourSteps uses the provided t function for labels",
+          "status": "passed"
+        },
+        {
+          "name": "hasTourBeenSeen / markTourSeen returns false when localStorage is empty",
+          "status": "passed"
+        },
+        {
+          "name": "hasTourBeenSeen / markTourSeen returns true after markTourSeen",
+          "status": "passed"
+        },
+        {
+          "name": "hasTourBeenSeen / markTourSeen writes to the correct key",
+          "status": "passed"
+        },
+        {
+          "name": "OnboardingTour renders nothing (null)",
+          "status": "passed"
+        },
+        {
+          "name": "OnboardingTour calls createTour with steps when autoStart is true",
+          "status": "passed"
+        },
+        {
+          "name": "OnboardingTour does not call createTour when tour already seen and autoStart is false",
+          "status": "passed"
+        },
+        {
+          "name": "OnboardingTour calls createTour even when tour was seen if autoStart is true",
+          "status": "passed"
+        },
+        {
+          "name": "OnboardingTour passes back/next/finish labels to createTour",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/context/__tests__/NetworkContext.test.tsx",
+      "assertions": [
+        {
+          "name": "NetworkContext URL scheme restrictions rejects non-https (non-localhost) URLs with a clear error and does not update config",
+          "status": "passed"
+        },
+        {
+          "name": "NetworkContext URL scheme restrictions shows a persistent warning banner whenever a custom endpoint is active",
+          "status": "passed"
+        },
+        {
+          "name": "NetworkContext URL scheme restrictions does not persist an insecure stored URL from localStorage",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/context/__tests__/AlertContext.test.tsx",
+      "assertions": [
+        {
+          "name": "AlertContext starts with no alerts",
+          "status": "passed"
+        },
+        {
+          "name": "AlertContext adds an alert on addAlert call",
+          "status": "passed"
+        },
+        {
+          "name": "AlertContext deduplicates alerts by source and type",
+          "status": "passed"
+        },
+        {
+          "name": "AlertContext allows different types from same source",
+          "status": "passed"
+        },
+        {
+          "name": "AlertContext dismisses an alert by id",
+          "status": "passed"
+        },
+        {
+          "name": "AlertContext dismisses all alerts from a source",
+          "status": "passed"
+        },
+        {
+          "name": "AlertContext throws when useAlerts is used outside AlertProvider",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/lib/wallets/__tests__/providers.test.ts",
+      "assertions": [
+        {
+          "name": "freighterProvider reports availability from window.freighter",
+          "status": "passed"
+        },
+        {
+          "name": "freighterProvider throws a not-installed error when Freighter is missing",
+          "status": "passed"
+        },
+        {
+          "name": "freighterProvider returns the granted address via requestAccess",
+          "status": "passed"
+        },
+        {
+          "name": "rabetProvider reports availability from window.rabet",
+          "status": "passed"
+        },
+        {
+          "name": "rabetProvider throws a not-installed error when Rabet is missing",
+          "status": "passed"
+        },
+        {
+          "name": "rabetProvider returns the public key from rabet.connect",
+          "status": "passed"
+        },
+        {
+          "name": "rabetProvider throws a helpful error when Rabet returns no address",
+          "status": "passed"
+        },
+        {
+          "name": "rabetProvider surfaces the underlying rejection message",
+          "status": "passed"
+        },
+        {
+          "name": "wallet registry exposes Freighter as the default provider",
+          "status": "passed"
+        },
+        {
+          "name": "wallet registry validates provider ids",
+          "status": "passed"
+        },
+        {
+          "name": "wallet registry lists providers with their current availability",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/EventMonitor/__tests__/EventMonitor.test.tsx",
+      "assertions": [
+        {
+          "name": "EventMonitor renders the heading",
+          "status": "passed"
+        },
+        {
+          "name": "EventMonitor shows empty state when no events exist",
+          "status": "passed"
+        },
+        {
+          "name": "EventMonitor renders filter buttons for all event types",
+          "status": "passed"
+        },
+        {
+          "name": "EventMonitor displays events emitted through the bus",
+          "status": "passed"
+        },
+        {
+          "name": "EventMonitor filters events when a type filter is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "EventMonitor clears events when clear button is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "EventMonitor does not show clear button when timeline is empty",
+          "status": "passed"
+        },
+        {
+          "name": "EventMonitor shows event count",
+          "status": "passed"
+        },
+        {
+          "name": "EventMonitor displays metadata key-value pairs",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/tests/error-modal.test.tsx",
+      "assertions": [
+        {
+          "name": "ErrorModal does not render the modal until an error is shown",
+          "status": "passed"
+        },
+        {
+          "name": "ErrorModal shows the modal with the provided message when showError is called",
+          "status": "passed"
+        },
+        {
+          "name": "ErrorModal falls back to a default title and uses a custom one when given",
+          "status": "passed"
+        },
+        {
+          "name": "ErrorModal closes when the dismiss button is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "ErrorModal closes when the close (X) button is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "ErrorModal closes when the Escape key is pressed",
+          "status": "passed"
+        },
+        {
+          "name": "ErrorModal renders an action button and invokes the handler, then closes",
+          "status": "passed"
+        },
+        {
+          "name": "ErrorModal throws when useError is used outside an ErrorProvider",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/__tests__/AlertBanner.test.tsx",
+      "assertions": [
+        {
+          "name": "AlertBanner renders nothing when no alerts exist",
+          "status": "passed"
+        },
+        {
+          "name": "AlertBanner shows alert banner when an alert is triggered",
+          "status": "passed"
+        },
+        {
+          "name": "AlertBanner shows critical alert over warning when both exist",
+          "status": "passed"
+        },
+        {
+          "name": "AlertBanner dismisses alert when close button is clicked",
+          "status": "passed"
+        },
+        {
+          "name": "AlertBanner shows info alert with correct icon",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/EventMonitor/__tests__/eventMonitorUtils.test.ts",
+      "assertions": [
+        {
+          "name": "getEventTypeOption returns the vote option for vote type",
+          "status": "passed"
+        },
+        {
+          "name": "getEventTypeOption returns the wallet option for wallet_connected",
+          "status": "passed"
+        },
+        {
+          "name": "getEventTypeOption returns the all option for all type",
+          "status": "passed"
+        },
+        {
+          "name": "getEventTypeOption falls back to unknown for unrecognized event types",
+          "status": "passed"
+        },
+        {
+          "name": "formatTimestamp returns a locale time string for valid ISO date",
+          "status": "passed"
+        },
+        {
+          "name": "formatTimestamp returns the original string for invalid dates",
+          "status": "passed"
+        },
+        {
+          "name": "formatTimestamp handles empty string gracefully",
+          "status": "passed"
+        },
+        {
+          "name": "filterEvents returns all events when filter is \"all\"",
+          "status": "passed"
+        },
+        {
+          "name": "filterEvents filters by specific event type",
+          "status": "passed"
+        },
+        {
+          "name": "filterEvents returns empty array when no events match",
+          "status": "passed"
+        },
+        {
+          "name": "filterEvents returns empty array for empty input",
+          "status": "passed"
+        },
+        {
+          "name": "EVENT_TYPE_OPTIONS includes all expected event types",
+          "status": "passed"
+        },
+        {
+          "name": "EVENT_TYPE_OPTIONS every option has a labelKey, icon, and color",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/hooks/__tests__/useVoteTransaction.test.ts",
+      "assertions": [
+        {
+          "name": "useVoteTransaction starts in idle state",
+          "status": "passed"
+        },
+        {
+          "name": "useVoteTransaction transitions idle \u2192 pending \u2192 success on a successful vote",
+          "status": "passed"
+        },
+        {
+          "name": "useVoteTransaction classifies a Horizon failure as network_error",
+          "status": "passed"
+        },
+        {
+          "name": "useVoteTransaction classifies a Freighter cancellation as user_rejected",
+          "status": "passed"
+        },
+        {
+          "name": "useVoteTransaction reset() returns state to idle",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/utils/__tests__/diff.test.ts",
+      "assertions": [
+        {
+          "name": "diffContract identical on\u2011chain and repo data yields match",
+          "status": "passed"
+        },
+        {
+          "name": "diffContract state variable drift is detected",
+          "status": "passed"
+        },
+        {
+          "name": "diffContract missing ABI function is reported",
+          "status": "passed"
+        },
+        {
+          "name": "diffContract changed function signature is reported",
+          "status": "passed"
+        },
+        {
+          "name": "diffContract bytecode mismatch is reported",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/tests/wallet-multiprovider.test.tsx",
+      "assertions": [
+        {
+          "name": "WalletContext multi-provider support connects through Rabet and persists the active provider",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/__tests__/PushNotificationToggle.test.tsx",
+      "assertions": [
+        {
+          "name": "PushNotificationToggle requests permission and saves the push subscription when enabled",
+          "status": "passed"
+        },
+        {
+          "name": "PushNotificationToggle unsubscribes and deletes push subscription when already enabled and clicked",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/dashboard/__tests__/DashboardGrid.test.tsx",
+      "assertions": [
+        {
+          "name": "DashboardGrid Component renders all widgets successfully",
+          "status": "passed"
+        },
+        {
+          "name": "DashboardGrid Component verifies layout state persistence and validation safety",
+          "status": "passed"
+        },
+        {
+          "name": "DashboardGrid Component enforces safety and sanitizes invalid coordinates or structures from layout state",
+          "status": "passed"
+        },
+        {
+          "name": "DashboardGrid Component verifies layout reset behavior",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/services/__tests__/vault.test.ts",
+      "assertions": [
+        {
+          "name": "Vault stores encrypted records and retrieves keys through an ephemeral callback",
+          "status": "passed"
+        },
+        {
+          "name": "Vault rejects software key providers unless explicitly allowed for tests",
+          "status": "passed"
+        },
+        {
+          "name": "Vault can read encrypted records from env without storing the raw key in env",
+          "status": "passed"
+        },
+        {
+          "name": "Vault reports relayer vault status without accepting raw env secrets",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/context/__tests__/WalletContext.setMockPublicKey.test.ts",
+      "assertions": [
+        {
+          "name": "WalletContext \u2013 setMockPublicKey production guard does NOT call applyVerifiedPublicKey when NODE_ENV is production",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext \u2013 setMockPublicKey production guard DOES call applyVerifiedPublicKey when NODE_ENV is development",
+          "status": "passed"
+        },
+        {
+          "name": "WalletContext \u2013 setMockPublicKey production guard DOES call applyVerifiedPublicKey when NODE_ENV is test",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/leaderboard/__tests__/score.test.ts",
+      "assertions": [
+        {
+          "name": "leaderboard score calculation calculates audit activity score with weighted data points",
+          "status": "passed"
+        },
+        {
+          "name": "leaderboard score calculation ranks contributors by score and uses audits as a tie breaker",
+          "status": "passed"
+        },
+        {
+          "name": "leaderboard score calculation sanitizes unsafe strings and clamps invalid activity numbers",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/hooks/__tests__/useEvents.test.ts",
+      "assertions": [
+        {
+          "name": "useEvents starts with an empty timeline",
+          "status": "passed"
+        },
+        {
+          "name": "useEvents emits an event that appears in the timeline",
+          "status": "passed"
+        },
+        {
+          "name": "useEvents prepends newer events (newest first)",
+          "status": "passed"
+        },
+        {
+          "name": "useEvents multiple hook instances share the bus",
+          "status": "passed"
+        },
+        {
+          "name": "useEvents clears the timeline",
+          "status": "passed"
+        },
+        {
+          "name": "useEvents respects maxEvents option",
+          "status": "passed"
+        },
+        {
+          "name": "useEvents strips sensitive metadata keys",
+          "status": "passed"
+        },
+        {
+          "name": "useEvents sanitizes unknown event type to \"unknown\"",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/ConsensusWidget/__tests__/consensusWidget.test.ts",
+      "assertions": [
+        {
+          "name": "calculateConsensusProgress returns 0 when threshold is 0",
+          "status": "passed"
+        },
+        {
+          "name": "calculateConsensusProgress returns 0 when threshold is negative",
+          "status": "passed"
+        },
+        {
+          "name": "calculateConsensusProgress returns 0 when currentWeight is 0",
+          "status": "passed"
+        },
+        {
+          "name": "calculateConsensusProgress calculates progress at 50% when current weight is half the threshold",
+          "status": "passed"
+        },
+        {
+          "name": "calculateConsensusProgress returns 100% when current weight equals threshold",
+          "status": "passed"
+        },
+        {
+          "name": "calculateConsensusProgress returns 100% when current weight exceeds threshold",
+          "status": "passed"
+        },
+        {
+          "name": "calculateConsensusProgress calculates progress correctly with large numbers",
+          "status": "passed"
+        },
+        {
+          "name": "calculateConsensusProgress calculates progress correctly at exactly 75%",
+          "status": "passed"
+        },
+        {
+          "name": "calculateConsensusProgress handles fractional threshold gracefully",
+          "status": "passed"
+        },
+        {
+          "name": "calculateConsensusProgress passes through all ConsensusData fields accurately",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/analytics/__tests__/GasHeatmap.test.tsx",
+      "assertions": [
+        {
+          "name": "analytics/GasHeatmap \u2014 helpers formatGas formats large values compactly",
+          "status": "passed"
+        },
+        {
+          "name": "analytics/GasHeatmap \u2014 helpers buildHeatmap returns a row per function and column per metric",
+          "status": "passed"
+        },
+        {
+          "name": "analytics/GasHeatmap \u2014 helpers findHotspots identifies the costliest function per metric",
+          "status": "passed"
+        },
+        {
+          "name": "analytics/GasHeatmap \u2014 component renders heatmap cells for each function/metric pair",
+          "status": "passed"
+        },
+        {
+          "name": "analytics/GasHeatmap \u2014 component hotspot cells are clearly flagged",
+          "status": "passed"
+        },
+        {
+          "name": "analytics/GasHeatmap \u2014 component renders the hotspots summary section",
+          "status": "passed"
+        },
+        {
+          "name": "analytics/GasHeatmap \u2014 component renders an empty state when data is empty",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/GlobalStateSearch/__tests__/GlobalStateSearch.test.tsx",
+      "assertions": [
+        {
+          "name": "searchOnChainTargets ranks exact function matches above looser text matches",
+          "status": "passed"
+        },
+        {
+          "name": "searchOnChainTargets finds targets by fuzzy tag and description tokens",
+          "status": "passed"
+        },
+        {
+          "name": "GlobalStateSearch filters visible targets as the guardian types",
+          "status": "passed"
+        },
+        {
+          "name": "GlobalStateSearch shows a clear empty state when no indexed state target matches",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/services/__tests__/rpc.test.ts",
+      "assertions": [
+        {
+          "name": "getUrlValidationError / validateUrl in non-production builds accepts https URLs",
+          "status": "passed"
+        },
+        {
+          "name": "getUrlValidationError / validateUrl in non-production builds accepts http localhost and 127.0.0.1",
+          "status": "passed"
+        },
+        {
+          "name": "getUrlValidationError / validateUrl in non-production builds rejects non-localhost http URLs with a clear error",
+          "status": "passed"
+        },
+        {
+          "name": "getUrlValidationError / validateUrl in non-production builds rejects http lookalike hosts that are not exact localhost",
+          "status": "passed"
+        },
+        {
+          "name": "getUrlValidationError / validateUrl in production builds rejects all http URLs including localhost",
+          "status": "passed"
+        },
+        {
+          "name": "getUrlValidationError / validateUrl in production builds still accepts https URLs",
+          "status": "passed"
+        },
+        {
+          "name": "getUrlValidationError / validateUrl rejects non-http(s) schemes and malformed URLs",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/Guard/__tests__/AccessControl.test.tsx",
+      "assertions": [
+        {
+          "name": "AccessControl renders children when the current role is allowed",
+          "status": "passed"
+        },
+        {
+          "name": "AccessControl renders fallback for a guardian when only admin is allowed",
+          "status": "passed"
+        },
+        {
+          "name": "AccessControl renders loading fallback while role data is loading",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/timer/__tests__/SessionTimer.test.tsx",
+      "assertions": [
+        {
+          "name": "formatAuditTime formats minutes and seconds without dropping partial seconds",
+          "status": "passed"
+        },
+        {
+          "name": "SessionTimer pauses accurately and records a completed audit session once",
+          "status": "passed"
+        },
+        {
+          "name": "SessionTimer reset restores the full session without erasing recorded audit time",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/__tests__/ThemeToggle.test.tsx",
+      "assertions": [
+        {
+          "name": "ThemeToggle renders a button",
+          "status": "passed"
+        },
+        {
+          "name": "ThemeToggle persists theme to localStorage when clicked",
+          "status": "passed"
+        },
+        {
+          "name": "ThemeToggle cycles through light \u2192 dark \u2192 system on successive clicks",
+          "status": "passed"
+        },
+        {
+          "name": "ThemeToggle restores theme from localStorage on mount",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/services/__tests__/githubClient.test.ts",
+      "assertions": [
+        {
+          "name": "fetchPRMetadata returns PR data on success",
+          "status": "passed"
+        },
+        {
+          "name": "fetchPRMetadata throws error when token missing",
+          "status": "passed"
+        },
+        {
+          "name": "fetchPRMetadata throws rate limit error",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/__tests__/security-headers.test.js",
+      "assertions": [
+        {
+          "name": "security headers applies CSP and hardening headers to every route by default",
+          "status": "passed"
+        },
+        {
+          "name": "security headers derives connect-src from NEXT_PUBLIC_HORIZON_URL / NEXT_PUBLIC_SOROBAN_RPC_URL for self-hosted deployments",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/hooks/__tests__/useChainState.test.ts",
+      "assertions": [
+        {
+          "name": "chain state invalidation maps WebSocket event metadata to scoped cache keys",
+          "status": "passed"
+        },
+        {
+          "name": "chain state invalidation uses events only as invalidation hints, not rendered chain state",
+          "status": "passed"
+        },
+        {
+          "name": "chain state invalidation increments the global version for manual force syncs",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/hooks/__tests__/useTaskChainEvents.test.ts",
+      "assertions": [
+        {
+          "name": "useTaskChainEvents starts polling when enabled",
+          "status": "passed"
+        },
+        {
+          "name": "useTaskChainEvents does not poll when disabled",
+          "status": "passed"
+        },
+        {
+          "name": "useTaskChainEvents emits events into the bus and increments pollCount",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/__tests__/FeedbackModal.test.tsx",
+      "assertions": [
+        {
+          "name": "FeedbackModal submits sanitized feedback to the feedback API",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/__tests__/integration.activity-export.test.tsx",
+      "assertions": [
+        {
+          "name": "integration: event -> persist -> export listener calls appendAuditEvent when emitting an event and exporter observes persisted records",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/i18n/config.test.ts",
+      "assertions": [
+        {
+          "name": "i18n configuration registers every supported language with matching translation keys",
+          "status": "passed"
+        },
+        {
+          "name": "i18n configuration validates supported language codes",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/app/api/feedback/route.test.ts",
+      "assertions": [
+        {
+          "name": "/api/feedback sanitizes and accepts valid feedback",
+          "status": "passed"
+        },
+        {
+          "name": "/api/feedback rejects empty feedback messages",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/lib/__tests__/stellar-expert.test.ts",
+      "assertions": [
+        {
+          "name": "getStellarExplorerTxUrl normalizes a uppercase transaction hash",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a mixed-case transaction hash",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a padded uppercase transaction hash",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a tabs and newlines transaction hash",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a already lowercase transaction hash",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl normalizes a padded lowercase transaction hash",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input \"\"",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input null",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input undefined",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input 0",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input 42",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input false",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input {}",
+          "status": "passed"
+        },
+        {
+          "name": "getStellarExplorerTxUrl preserves the empty result for invalid runtime input []",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/hooks/__tests__/useActivityStream.test.tsx",
+      "assertions": [
+        {
+          "name": "useActivityStream mirrors protocol events (non-transaction) to audit logger",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "file": "[local-workspace]/src/components/ActivityLogExport/__tests__/ActivityLogExport.test.tsx",
+      "assertions": [
+        {
+          "name": "ActivityLogExport renders buttons and calls export",
+          "status": "passed"
+        }
+      ]
+    }
+  ]
+}

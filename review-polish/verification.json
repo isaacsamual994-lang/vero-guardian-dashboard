@@ -1,0 +1,74 @@
+{
+  "verified_at": "2026-10-21T22:51:19.771360+00:00",
+  "pr": 366,
+  "local_commit": "4f56c19a5fa0e320528b7b1accb2d8fc61e7ae83",
+  "previous_local_commit": "5092f52cb6ca20a0f17f09840d32b008f35273b5",
+  "previous_published_commit": "3fc4bd69003790fd3cc58f5ffb8ef71c5e6b5e99",
+  "tree": "afc752b781ef2e5b6d1f93a89867203a704a8b0b",
+  "base": "85999075b5737740237a1b2c796019c78e5fff58",
+  "files": [
+    "src/components/FeedbackModal.tsx",
+    "src/components/__tests__/FeedbackModal.i18n.test.tsx",
+    "src/i18n/locales/en.json",
+    "src/i18n/locales/es.json",
+    "src/i18n/locales/fr.json"
+  ],
+  "tracked_files_checked": 263,
+  "source_sha256": {
+    "src/components/FeedbackModal.tsx": "b980cd49bb875efcf22fafeae2c78fff421e5035d3c0afac14b53728048d4b08",
+    "src/components/__tests__/FeedbackModal.i18n.test.tsx": "a3ef7e0709b80ff8896def320e20aeaf244b85614eb519b658e0cc4df65862d9",
+    "src/i18n/locales/en.json": "291efe68959a8a852a017a01a13f61d9be5a26e9b0dab4d4ba7f835938270c36",
+    "src/i18n/locales/es.json": "a896ce8df2ecb36fb2fd7afdc972565d754809695e207d506b8913a63f6cc3c4",
+    "src/i18n/locales/fr.json": "76ff1bc8afc518429f6bac201ee93227a8d6401bc1ce6ae9a57214d26406b597"
+  },
+  "results": {
+    "standalone": {
+      "passed": 878,
+      "failed": 0,
+      "suites": 77,
+      "typecheck_exit_code": 0,
+      "lint_errors": 0,
+      "lint_warnings": 32,
+      "production_build_exit_code": 0
+    },
+    "combined": {
+      "passed": 904,
+      "failed": 0,
+      "suites": 80,
+      "typecheck_exit_code": 0,
+      "lint_errors": 0,
+      "lint_warnings": 32,
+      "production_build_exit_code": 0
+    }
+  },
+  "new_regression_cases_this_revision": 3,
+  "total_new_feedback_cases": 16,
+  "negative_control": {
+    "previous_PR_passed": 13,
+    "previous_PR_failed": 3,
+    "setup_errors": 0
+  },
+  "merge_preview": {
+    "both_orders_clean": true,
+    "locales": [
+      "en",
+      "es",
+      "fr"
+    ],
+    "timer_and_feedback_retained": true,
+    "other_PR_source_changed": false
+  },
+  "combined_validation": "Isolated source assembled from current #363/#364/#365 and updated #366; not an upstream merge or official CI run.",
+  "combined_tracked_files": 266,
+  "visual_cases": 6,
+  "environment": "macOS arm64 / Node 24.20.0 / existing exact-lockfile dependencies on isolated case-sensitive workspace",
+  "official_ci_verified": false,
+  "reward_confirmed": false,
+  "spent_aud": "0.00",
+  "published_commit": "db36cfffcde51cb600f5907e6b75a2cafca3e763",
+  "peer_heads": {
+    "363": "27fffd30bffbd5ead060c974e87d0f3b46318b99",
+    "364": "844dca8a65acc161c612f4b14b98a6f75bfb2593",
+    "365": "99e46ab48a44779cbfd74dfa29f8ba0fe2af27fd"
+  }
+}
