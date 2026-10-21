@@ -1,0 +1,121 @@
+{
+  "errors": 0,
+  "warnings": 32,
+  "files_with_findings": [
+    {
+      "file": "src/components/AuditSessionTimer/AuditSessionTimer.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/components/ConsensusWidget/ConsensusWidget.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/components/ContractCallGraph/ContractCallGraph.tsx",
+      "errors": 0,
+      "warnings": 2
+    },
+    {
+      "file": "src/components/NetworkStatus/NetworkStatus.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/components/PushNotificationToggle.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/components/TaskCard.tsx",
+      "errors": 0,
+      "warnings": 2
+    },
+    {
+      "file": "src/components/TransactionFeed/TransactionFeed.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/components/dashboard/DashboardGrid.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/components/leaderboard/Leaderboard.tsx",
+      "errors": 0,
+      "warnings": 2
+    },
+    {
+      "file": "src/components/search/GlobalSearchPanel.tsx",
+      "errors": 0,
+      "warnings": 2
+    },
+    {
+      "file": "src/components/search/SearchInput.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/components/search/useSearchIndex.ts",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/components/security/AuditExport.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/components/security/RelayerVault.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/context/NetworkContext.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/context/RoleContext.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/context/ThemeContext.tsx",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/context/WalletContext.tsx",
+      "errors": 0,
+      "warnings": 2
+    },
+    {
+      "file": "src/hooks/useActivityStream.ts",
+      "errors": 0,
+      "warnings": 2
+    },
+    {
+      "file": "src/hooks/useEvents.ts",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/hooks/useOnChainCache.ts",
+      "errors": 0,
+      "warnings": 4
+    },
+    {
+      "file": "src/hooks/useSocketIO.ts",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "file": "src/hooks/useTaskChainEvents.ts",
+      "errors": 0,
+      "warnings": 1
+    }
+  ]
+}

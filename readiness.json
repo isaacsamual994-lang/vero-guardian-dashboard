@@ -1,0 +1,62 @@
+{
+  "verified_at": "2026-10-21T14:57:32.089726+00:00",
+  "pr": 363,
+  "source_commit": "27fffd30bffbd5ead060c974e87d0f3b46318b99",
+  "source_tree": "7d2ac3426d6e4dbca546a3d2fcc975920005b05b",
+  "tracked_files_identical_after_build": 263,
+  "environment": {
+    "version": "v24.20.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "filesystem_case_sensitive": true,
+  "tests": {
+    "passed": 866,
+    "failed": 0,
+    "suites_passed": 77,
+    "suites_failed": 0
+  },
+  "typecheck_exit_code": 0,
+  "lint": {
+    "exit_code": 0,
+    "errors": 0,
+    "warnings": 32
+  },
+  "production_build": {
+    "command": "next build",
+    "bundler": "Turbopack",
+    "exit_code": 0
+  },
+  "source_or_lockfile_changes_for_readiness": false,
+  "dependency_repair": "Official lucide-react1.33.0 archive matched the lockfile SHA512; incomplete installed files restored without version changes or type stubs.",
+  "previous_failures": "The same unchanged source and dependency versions pass in the fully case-sensitive local test workspace. Earlier casing failures were local-environment failures, not unresolved defects in this patch.",
+  "upstream_ci": "Separate upstream run39616866375 has not executed; maintainer approval remains required. These are local validation results, not an upstream CI approval.",
+  "reward_confirmed": false,
+  "money_spent_aud": "0.00",
+  "checks": [
+    {
+      "name": "release-types",
+      "exit_code": 0,
+      "seconds": 14.68,
+      "at": "2026-10-21T14:52:43.658247+00:00"
+    },
+    {
+      "name": "release-tests",
+      "exit_code": 0,
+      "seconds": 49.24,
+      "at": "2026-10-21T14:53:32.898546+00:00"
+    },
+    {
+      "name": "release-lint",
+      "exit_code": 0,
+      "seconds": 50.47,
+      "at": "2026-10-21T14:54:23.434681+00:00"
+    },
+    {
+      "name": "release-build",
+      "exit_code": 0,
+      "seconds": 117.2,
+      "at": "2026-10-21T14:56:20.630298+00:00"
+    }
+  ]
+}
