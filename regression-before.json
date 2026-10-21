@@ -1,0 +1,22 @@
+[
+  {
+    "name": "SessionTimer translations (#159) translates every state and accessible label in en",
+    "status": "failed",
+    "message": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"1 second remaining\"\nReceived: \"1 seconds remaining\"\n    at toBe ([workspace]/src/components/timer/__tests__/SessionTimer.i18n.test.tsx:89:66)"
+  },
+  {
+    "name": "SessionTimer translations (#159) translates every state and accessible label in es",
+    "status": "failed",
+    "message": "TestingLibraryElementError: Unable to find an accessible element with the role \"heading\" and name \"Temporizador de concentración para auditorías\"\n\nHere are the accessible roles:\n\n  region:\n\n  Name \"Audit focus timer\":\n  <section\n    aria-labelledby=\"audit-session-timer-title\"\n    class=\"space-y-5\"\n  />\n\n  --------------------------------------------------\n  heading:\n\n  Name \"Audit focus timer\":\n  <h2\n    class=\"text-lg font-semibold text-slate-900 dark:text-white\"\n    id=\"audit-session-timer-title\"\n  />\n\n  --------------------------------------------------\n  paragraph:\n\n  Name \"\":\n  <p\n    class=\"text-xs text-slate-500 dark:text-slate-400\"\n  />\n\n  Name \"\":\n  <p\n    class=\"mt-2 text-sm font-medium text-violet-700 dark:text-violet-300\"\n  />\n\n  ------------------------------------------------"
+  },
+  {
+    "name": "SessionTimer translations (#159) translates every state and accessible label in fr",
+    "status": "failed",
+    "message": "TestingLibraryElementError: Unable to find an accessible element with the role \"heading\" and name \"Minuteur de concentration pour les audits\"\n\nHere are the accessible roles:\n\n  region:\n\n  Name \"Audit focus timer\":\n  <section\n    aria-labelledby=\"audit-session-timer-title\"\n    class=\"space-y-5\"\n  />\n\n  --------------------------------------------------\n  heading:\n\n  Name \"Audit focus timer\":\n  <h2\n    class=\"text-lg font-semibold text-slate-900 dark:text-white\"\n    id=\"audit-session-timer-title\"\n  />\n\n  --------------------------------------------------\n  paragraph:\n\n  Name \"\":\n  <p\n    class=\"text-xs text-slate-500 dark:text-slate-400\"\n  />\n\n  Name \"\":\n  <p\n    class=\"mt-2 text-sm font-medium text-violet-700 dark:text-violet-300\"\n  />\n\n  --------------------------------------------------\n "
+  },
+  {
+    "name": "SessionTimer translations (#159) changes language live without restarting a running or paused session",
+    "status": "failed",
+    "message": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Queda 1 segundo\"\nReceived: \"1 seconds remaining\"\n    at Object.toBe ([workspace]/src/components/timer/__tests__/SessionTimer.i18n.test.tsx:121:66)"
+  }
+]

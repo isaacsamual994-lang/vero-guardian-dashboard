@@ -1,0 +1,185 @@
+src/components/AuditSessionTimer/__tests__/AuditSessionTimer.test.tsx(2,8): error TS1192: Module '"[workspace]/src/components/AuditSessionTimer/auditSessionTimer"' has no default export.
+src/components/AuditSessionTimer/__tests__/AuditSessionTimer.test.tsx(2,31): error TS1149: File name '[workspace]/src/components/AuditSessionTimer/AuditSessionTimer.ts' differs from already included file name '[workspace]/src/components/AuditSessionTimer/auditSessionTimer.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via './AuditSessionTimer' from file '[workspace]/src/components/AuditSessionTimer/index.ts'
+    Imported via './auditSessionTimer' from file '[workspace]/src/components/AuditSessionTimer/index.ts'
+    Imported via '../AuditSessionTimer' from file '[workspace]/src/components/AuditSessionTimer/__tests__/AuditSessionTimer.test.tsx'
+    Imported via '../auditSessionTimer' from file '[workspace]/src/components/AuditSessionTimer/__tests__/AuditSessionTimer.test.tsx'
+src/components/AuditSessionTimer/index.ts(1,10): error TS2305: Module '"./AuditSessionTimer"' has no exported member 'default'.
+src/components/AuditSessionTimer/index.ts(1,24): error TS2305: Module '"./AuditSessionTimer"' has no exported member 'AuditSessionTimerProps'.
+src/components/AuditSessionTimer/index.ts(1,54): error TS1149: File name '[workspace]/src/components/AuditSessionTimer/AuditSessionTimer.ts' differs from already included file name '[workspace]/src/components/AuditSessionTimer/auditSessionTimer.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via './AuditSessionTimer' from file '[workspace]/src/components/AuditSessionTimer/index.ts'
+    Imported via './auditSessionTimer' from file '[workspace]/src/components/AuditSessionTimer/index.ts'
+    Imported via '../AuditSessionTimer' from file '[workspace]/src/components/AuditSessionTimer/__tests__/AuditSessionTimer.test.tsx'
+    Imported via '../auditSessionTimer' from file '[workspace]/src/components/AuditSessionTimer/__tests__/AuditSessionTimer.test.tsx'
+src/components/BatchTxBuilder/index.ts(1,10): error TS2305: Module '"./BatchTxBuilder"' has no exported member 'default'.
+src/components/BatchTxBuilder/index.ts(1,25): error TS1149: File name '[workspace]/src/components/BatchTxBuilder/BatchTxBuilder.ts' differs from already included file name '[workspace]/src/components/BatchTxBuilder/batchTxBuilder.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '@/components/BatchTxBuilder/batchTxBuilder' from file '[workspace]/src/services/txBuilder.ts'
+    Imported via './BatchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/index.ts'
+    Imported via './BatchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/index.ts'
+    Imported via './batchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/index.ts'
+    Imported via './batchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/index.ts'
+    Imported via '../batchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/__tests__/batchTxBuilder.test.ts'
+src/components/BatchTxBuilder/index.ts(2,15): error TS2305: Module '"./BatchTxBuilder"' has no exported member 'BatchBroadcaster'.
+src/components/BatchTxBuilder/index.ts(2,33): error TS2305: Module '"./BatchTxBuilder"' has no exported member 'BatchTxBuilderProps'.
+src/components/BatchTxBuilder/index.ts(2,60): error TS1149: File name '[workspace]/src/components/BatchTxBuilder/BatchTxBuilder.ts' differs from already included file name '[workspace]/src/components/BatchTxBuilder/batchTxBuilder.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '@/components/BatchTxBuilder/batchTxBuilder' from file '[workspace]/src/services/txBuilder.ts'
+    Imported via './BatchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/index.ts'
+    Imported via './BatchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/index.ts'
+    Imported via './batchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/index.ts'
+    Imported via './batchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/index.ts'
+    Imported via '../batchTxBuilder' from file '[workspace]/src/components/BatchTxBuilder/__tests__/batchTxBuilder.test.ts'
+src/components/ConsensusWidget/index.ts(2,10): error TS2305: Module '"./consensusWidget"' has no exported member 'default'.
+src/components/ConsensusWidget/index.ts(2,25): error TS1149: File name '[workspace]/src/components/ConsensusWidget/ConsensusWidget.ts' differs from already included file name '[workspace]/src/components/ConsensusWidget/consensusWidget.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via './consensusWidget' from file '[workspace]/src/components/ConsensusWidget/index.ts'
+    Imported via './ConsensusWidget' from file '[workspace]/src/components/ConsensusWidget/index.ts'
+    Imported via './ConsensusWidget' from file '[workspace]/src/components/ConsensusWidget/index.ts'
+    Imported via '../consensusWidget' from file '[workspace]/src/components/ConsensusWidget/__tests__/consensusWidget.test.ts'
+src/components/ConsensusWidget/index.ts(3,15): error TS2305: Module '"./consensusWidget"' has no exported member 'ConsensusWidgetProps'.
+src/components/ConsensusWidget/index.ts(3,43): error TS1149: File name '[workspace]/src/components/ConsensusWidget/ConsensusWidget.ts' differs from already included file name '[workspace]/src/components/ConsensusWidget/consensusWidget.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via './consensusWidget' from file '[workspace]/src/components/ConsensusWidget/index.ts'
+    Imported via './ConsensusWidget' from file '[workspace]/src/components/ConsensusWidget/index.ts'
+    Imported via './ConsensusWidget' from file '[workspace]/src/components/ConsensusWidget/index.ts'
+    Imported via '../consensusWidget' from file '[workspace]/src/components/ConsensusWidget/__tests__/consensusWidget.test.ts'
+src/components/ContractCallGraph/__tests__/ContractCallGraph.test.tsx(3,8): error TS1192: Module '"[workspace]/src/components/ContractCallGraph/contractCallGraph"' has no default export.
+src/components/ContractCallGraph/__tests__/ContractCallGraph.test.tsx(3,31): error TS1149: File name '[workspace]/src/components/ContractCallGraph/ContractCallGraph.ts' differs from already included file name '[workspace]/src/components/ContractCallGraph/contractCallGraph.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via './ContractCallGraph' from file '[workspace]/src/components/ContractCallGraph/index.ts'
+    Imported via './contractCallGraph' from file '[workspace]/src/components/ContractCallGraph/index.ts'
+    Imported via '../ContractCallGraph' from file '[workspace]/src/components/ContractCallGraph/__tests__/ContractCallGraph.test.tsx'
+    Imported via '../contractCallGraph' from file '[workspace]/src/components/ContractCallGraph/__tests__/ContractCallGraph.test.tsx'
+src/components/ContractCallGraph/index.ts(1,10): error TS2305: Module '"./ContractCallGraph"' has no exported member 'default'.
+src/components/ContractCallGraph/index.ts(1,24): error TS2305: Module '"./ContractCallGraph"' has no exported member 'ContractCallGraphProps'.
+src/components/ContractCallGraph/index.ts(1,54): error TS1149: File name '[workspace]/src/components/ContractCallGraph/ContractCallGraph.ts' differs from already included file name '[workspace]/src/components/ContractCallGraph/contractCallGraph.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via './ContractCallGraph' from file '[workspace]/src/components/ContractCallGraph/index.ts'
+    Imported via './contractCallGraph' from file '[workspace]/src/components/ContractCallGraph/index.ts'
+    Imported via '../ContractCallGraph' from file '[workspace]/src/components/ContractCallGraph/__tests__/ContractCallGraph.test.tsx'
+    Imported via '../contractCallGraph' from file '[workspace]/src/components/ContractCallGraph/__tests__/ContractCallGraph.test.tsx'
+src/components/ContractTimeTraveler/__tests__/ContractTimeTraveler.test.tsx(2,8): error TS1192: Module '"[workspace]/src/components/ContractTimeTraveler/contractTimeTraveler"' has no default export.
+src/components/ContractTimeTraveler/__tests__/ContractTimeTraveler.test.tsx(2,34): error TS1149: File name '[workspace]/src/components/ContractTimeTraveler/ContractTimeTraveler.ts' differs from already included file name '[workspace]/src/components/ContractTimeTraveler/contractTimeTraveler.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via './ContractTimeTraveler' from file '[workspace]/src/components/ContractTimeTraveler/index.ts'
+    Imported via './contractTimeTraveler' from file '[workspace]/src/components/ContractTimeTraveler/index.ts'
+    Imported via '../ContractTimeTraveler' from file '[workspace]/src/components/ContractTimeTraveler/__tests__/ContractTimeTraveler.test.tsx'
+    Imported via '../contractTimeTraveler' from file '[workspace]/src/components/ContractTimeTraveler/__tests__/ContractTimeTraveler.test.tsx'
+src/components/ContractTimeTraveler/index.ts(1,10): error TS2305: Module '"./ContractTimeTraveler"' has no exported member 'default'.
+src/components/ContractTimeTraveler/index.ts(1,24): error TS2305: Module '"./ContractTimeTraveler"' has no exported member 'ContractTimeTravelerProps'.
+src/components/ContractTimeTraveler/index.ts(1,57): error TS1149: File name '[workspace]/src/components/ContractTimeTraveler/ContractTimeTraveler.ts' differs from already included file name '[workspace]/src/components/ContractTimeTraveler/contractTimeTraveler.ts' only in casing.
+  The file is in the program because:
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via './ContractTimeTraveler' from file '[workspace]/src/components/ContractTimeTraveler/index.ts'
+    Imported via './contractTimeTraveler' from file '[workspace]/src/components/ContractTimeTraveler/index.ts'
+    Imported via '../ContractTimeTraveler' from file '[workspace]/src/components/ContractTimeTraveler/__tests__/ContractTimeTraveler.test.tsx'
+    Imported via '../contractTimeTraveler' from file '[workspace]/src/components/ContractTimeTraveler/__tests__/ContractTimeTraveler.test.tsx'
+src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx(2,8): error TS1192: Module '"[workspace]/src/components/IPFSDocViewer/IPFSDocViewer"' has no default export.
+src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx(3,64): error TS1149: File name '[workspace]/src/components/IPFSDocViewer/ipfsDocViewer.ts' differs from already included file name '[workspace]/src/components/IPFSDocViewer/IPFSDocViewer.ts' only in casing.
+  The file is in the program because:
+    Imported via './IPFSDocViewer' from file '[workspace]/src/components/IPFSDocViewer/index.ts'
+    Imported via './ipfsDocViewer' from file '[workspace]/src/components/IPFSDocViewer/index.ts'
+    Imported via './IPFSDocViewer' from file '[workspace]/src/components/IPFSDocViewer/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '../IPFSDocViewer' from file '[workspace]/src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx'
+    Imported via '../ipfsDocViewer' from file '[workspace]/src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx'
+src/components/IPFSDocViewer/index.ts(1,10): error TS2305: Module '"./IPFSDocViewer"' has no exported member 'IPFSDocViewer'.
+src/components/IPFSDocViewer/index.ts(1,30): error TS2305: Module '"./IPFSDocViewer"' has no exported member 'IPFSDocViewerProps'.
+src/components/IPFSDocViewer/index.ts(1,56): error TS1261: Already included file name '[workspace]/src/components/IPFSDocViewer/IPFSDocViewer.ts' differs from file name '[workspace]/src/components/IPFSDocViewer/ipfsDocViewer.ts' only in casing.
+  The file is in the program because:
+    Imported via './IPFSDocViewer' from file '[workspace]/src/components/IPFSDocViewer/index.ts'
+    Imported via './ipfsDocViewer' from file '[workspace]/src/components/IPFSDocViewer/index.ts'
+    Imported via './IPFSDocViewer' from file '[workspace]/src/components/IPFSDocViewer/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '../IPFSDocViewer' from file '[workspace]/src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx'
+    Imported via '../ipfsDocViewer' from file '[workspace]/src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx'
+src/components/IPFSDocViewer/index.ts(2,64): error TS1149: File name '[workspace]/src/components/IPFSDocViewer/ipfsDocViewer.ts' differs from already included file name '[workspace]/src/components/IPFSDocViewer/IPFSDocViewer.ts' only in casing.
+  The file is in the program because:
+    Imported via './IPFSDocViewer' from file '[workspace]/src/components/IPFSDocViewer/index.ts'
+    Imported via './ipfsDocViewer' from file '[workspace]/src/components/IPFSDocViewer/index.ts'
+    Imported via './IPFSDocViewer' from file '[workspace]/src/components/IPFSDocViewer/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '../IPFSDocViewer' from file '[workspace]/src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx'
+    Imported via '../ipfsDocViewer' from file '[workspace]/src/components/IPFSDocViewer/__tests__/IPFSDocViewer.test.tsx'
+src/components/IPFSDocViewer/index.ts(3,10): error TS2305: Module '"./IPFSDocViewer"' has no exported member 'default'.
+src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx(3,10): error TS2305: Module '"../MultiSigPreviewer"' has no exported member 'MultiSigPreviewer'.
+src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx(9,8): error TS1149: File name '[workspace]/src/components/MultiSigPreviewer/multiSigPreviewer.ts' differs from already included file name '[workspace]/src/components/MultiSigPreviewer/MultiSigPreviewer.ts' only in casing.
+  The file is in the program because:
+    Imported via './MultiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/index.ts'
+    Imported via './multiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '../MultiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx'
+    Imported via '../multiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx'
+src/components/MultiSigPreviewer/index.ts(1,10): error TS2305: Module '"./MultiSigPreviewer"' has no exported member 'MultiSigPreviewer'.
+src/components/MultiSigPreviewer/index.ts(1,34): error TS2305: Module '"./MultiSigPreviewer"' has no exported member 'MultiSigPreviewerProps'.
+src/components/MultiSigPreviewer/index.ts(1,58): error TS2305: Module '"./MultiSigPreviewer"' has no exported member 'default'.
+src/components/MultiSigPreviewer/index.ts(1,73): error TS1261: Already included file name '[workspace]/src/components/MultiSigPreviewer/MultiSigPreviewer.ts' differs from file name '[workspace]/src/components/MultiSigPreviewer/multiSigPreviewer.ts' only in casing.
+  The file is in the program because:
+    Imported via './MultiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/index.ts'
+    Imported via './multiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '../MultiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx'
+    Imported via '../multiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx'
+src/components/MultiSigPreviewer/index.ts(10,8): error TS1149: File name '[workspace]/src/components/MultiSigPreviewer/multiSigPreviewer.ts' differs from already included file name '[workspace]/src/components/MultiSigPreviewer/MultiSigPreviewer.ts' only in casing.
+  The file is in the program because:
+    Imported via './MultiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/index.ts'
+    Imported via './multiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '../MultiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx'
+    Imported via '../multiSigPreviewer' from file '[workspace]/src/components/MultiSigPreviewer/__tests__/MultiSigPreviewer.test.tsx'
+src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx(3,10): error TS2305: Module '"../OnboardingTour"' has no exported member 'OnboardingTour'.
+src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx(9,8): error TS1149: File name '[workspace]/src/components/OnboardingTour/onboardingTour.ts' differs from already included file name '[workspace]/src/components/OnboardingTour/OnboardingTour.ts' only in casing.
+  The file is in the program because:
+    Imported via './OnboardingTour' from file '[workspace]/src/components/OnboardingTour/index.ts'
+    Imported via './onboardingTour' from file '[workspace]/src/components/OnboardingTour/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '../OnboardingTour' from file '[workspace]/src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx'
+    Imported via '../onboardingTour' from file '[workspace]/src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx'
+src/components/OnboardingTour/index.ts(1,10): error TS2305: Module '"./OnboardingTour"' has no exported member 'OnboardingTour'.
+src/components/OnboardingTour/index.ts(1,26): error TS2305: Module '"./OnboardingTour"' has no exported member 'default'.
+src/components/OnboardingTour/index.ts(1,41): error TS1261: Already included file name '[workspace]/src/components/OnboardingTour/OnboardingTour.ts' differs from file name '[workspace]/src/components/OnboardingTour/onboardingTour.ts' only in casing.
+  The file is in the program because:
+    Imported via './OnboardingTour' from file '[workspace]/src/components/OnboardingTour/index.ts'
+    Imported via './onboardingTour' from file '[workspace]/src/components/OnboardingTour/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '../OnboardingTour' from file '[workspace]/src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx'
+    Imported via '../onboardingTour' from file '[workspace]/src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx'
+src/components/OnboardingTour/index.ts(2,78): error TS1149: File name '[workspace]/src/components/OnboardingTour/onboardingTour.ts' differs from already included file name '[workspace]/src/components/OnboardingTour/OnboardingTour.ts' only in casing.
+  The file is in the program because:
+    Imported via './OnboardingTour' from file '[workspace]/src/components/OnboardingTour/index.ts'
+    Imported via './onboardingTour' from file '[workspace]/src/components/OnboardingTour/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '../OnboardingTour' from file '[workspace]/src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx'
+    Imported via '../onboardingTour' from file '[workspace]/src/components/OnboardingTour/__tests__/OnboardingTour.test.tsx'
+src/components/ReputationSimulator/__tests__/reputationSimulator.test.ts(8,8): error TS1149: File name '[workspace]/src/components/ReputationSimulator/reputationSimulator.ts' differs from already included file name '[workspace]/src/components/ReputationSimulator/ReputationSimulator.ts' only in casing.
+  The file is in the program because:
+    Imported via './ReputationSimulator' from file '[workspace]/src/components/ReputationSimulator/index.ts'
+    Imported via './reputationSimulator' from file '[workspace]/src/components/ReputationSimulator/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '@/components/ReputationSimulator/reputationSimulator' from file '[workspace]/src/components/ReputationSimulator/__tests__/reputationSimulator.test.ts'
+src/components/ReputationSimulator/index.ts(1,10): error TS2305: Module '"./ReputationSimulator"' has no exported member 'ReputationSimulator'.
+src/components/ReputationSimulator/index.ts(1,31): error TS2305: Module '"./ReputationSimulator"' has no exported member 'default'.
+src/components/ReputationSimulator/index.ts(1,46): error TS1261: Already included file name '[workspace]/src/components/ReputationSimulator/ReputationSimulator.ts' differs from file name '[workspace]/src/components/ReputationSimulator/reputationSimulator.ts' only in casing.
+  The file is in the program because:
+    Imported via './ReputationSimulator' from file '[workspace]/src/components/ReputationSimulator/index.ts'
+    Imported via './reputationSimulator' from file '[workspace]/src/components/ReputationSimulator/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '@/components/ReputationSimulator/reputationSimulator' from file '[workspace]/src/components/ReputationSimulator/__tests__/reputationSimulator.test.ts'
+src/components/ReputationSimulator/index.ts(10,8): error TS1149: File name '[workspace]/src/components/ReputationSimulator/reputationSimulator.ts' differs from already included file name '[workspace]/src/components/ReputationSimulator/ReputationSimulator.ts' only in casing.
+  The file is in the program because:
+    Imported via './ReputationSimulator' from file '[workspace]/src/components/ReputationSimulator/index.ts'
+    Imported via './reputationSimulator' from file '[workspace]/src/components/ReputationSimulator/index.ts'
+    Matched by include pattern '**/*.ts' in '[workspace]/tsconfig.json'
+    Imported via '@/components/ReputationSimulator/reputationSimulator' from file '[workspace]/src/components/ReputationSimulator/__tests__/reputationSimulator.test.ts'

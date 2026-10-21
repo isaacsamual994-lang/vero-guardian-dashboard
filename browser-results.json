@@ -1,0 +1,83 @@
+{
+  "checks" : [
+    {
+      "bytes" : 163584,
+      "fitsWidth" : true,
+      "heading" : "Audit focus timer",
+      "lang" : "en",
+      "progress" : "Audit session progress",
+      "screenshot" : "en-light-900.png",
+      "text" : "Audit focus timerOne task. One focused session.00:00Session complete — time recordedStart another audit1 session recordedTotal audit time: 00:10",
+      "theme" : "light",
+      "timer" : "00:00",
+      "timerLabel" : "0 seconds remaining",
+      "width" : 900
+    },
+    {
+      "bytes" : 128892,
+      "fitsWidth" : true,
+      "heading" : "Audit focus timer",
+      "lang" : "en",
+      "progress" : "Audit session progress",
+      "screenshot" : "en-dark-390.png",
+      "text" : "Audit focus timerOne task. One focused session.00:00Session complete — time recordedStart another audit1 session recordedTotal audit time: 00:10",
+      "theme" : "dark",
+      "timer" : "00:00",
+      "timerLabel" : "0 seconds remaining",
+      "width" : 390
+    },
+    {
+      "bytes" : 172577,
+      "fitsWidth" : true,
+      "heading" : "Temporizador de concentración para auditorías",
+      "lang" : "es",
+      "progress" : "Progreso de la sesión de auditoría",
+      "screenshot" : "es-light-900.png",
+      "text" : "Temporizador de concentración para auditoríasUna tarea. Una sesión de concentración.00:00Sesión completada: tiempo registradoIniciar otra auditoría1 sesión registradaTiempo total de auditoría: 00:10",
+      "theme" : "light",
+      "timer" : "00:00",
+      "timerLabel" : "Quedan 0 segundos",
+      "width" : 900
+    },
+    {
+      "bytes" : 139666,
+      "fitsWidth" : true,
+      "heading" : "Temporizador de concentración para auditorías",
+      "lang" : "es",
+      "progress" : "Progreso de la sesión de auditoría",
+      "screenshot" : "es-dark-390.png",
+      "text" : "Temporizador de concentración para auditoríasUna tarea. Una sesión de concentración.00:00Sesión completada: tiempo registradoIniciar otra auditoría1 sesión registradaTiempo total de auditoría: 00:10",
+      "theme" : "dark",
+      "timer" : "00:00",
+      "timerLabel" : "Quedan 0 segundos",
+      "width" : 390
+    },
+    {
+      "bytes" : 138758,
+      "fitsWidth" : true,
+      "heading" : "Minuteur de concentration pour les audits",
+      "lang" : "fr",
+      "progress" : "Progression de la session d’audit",
+      "screenshot" : "fr-light-390.png",
+      "text" : "Minuteur de concentration pour les auditsUne tâche. Une session de concentration.00:00Session terminée : temps enregistréDémarrer un autre audit1 session enregistréeTemps d’audit total : 00:10",
+      "theme" : "light",
+      "timer" : "00:00",
+      "timerLabel" : "0 seconde restante",
+      "width" : 390
+    },
+    {
+      "bytes" : 167502,
+      "fitsWidth" : true,
+      "heading" : "Minuteur de concentration pour les audits",
+      "lang" : "fr",
+      "progress" : "Progression de la session d’audit",
+      "screenshot" : "fr-dark-900.png",
+      "text" : "Minuteur de concentration pour les auditsUne tâche. Une session de concentration.00:00Session terminée : temps enregistréDémarrer un autre audit1 session enregistréeTemps d’audit total : 00:10",
+      "theme" : "dark",
+      "timer" : "00:00",
+      "timerLabel" : "0 seconde restante",
+      "width" : 900
+    }
+  ],
+  "engine" : "Native WKWebView with nonpersistent data store; local component fixture only"
+}

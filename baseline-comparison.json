@@ -1,0 +1,13 @@
+{
+  "base_sha": "85999075b5737740237a1b2c796019c78e5fff58",
+  "baseline_failed_tests": 61,
+  "patched_failed_tests": 61,
+  "new_failed_tests": [],
+  "same_failed_tests": true,
+  "original_type_diagnostics": 49,
+  "patched_type_diagnostics": 49,
+  "same_type_diagnostics": true,
+  "source_restored": true,
+  "whole_suite_passed": false,
+  "notes": "Only failing suites were rerun with original source/dictionaries. Existing adjacent-case module resolution issues on this Mac were not patched."
+}

@@ -1,0 +1,10 @@
+PASS src/components/timer/__tests__/SessionTimer.test.tsx (10.21 s)
+PASS src/components/timer/__tests__/SessionTimer.i18n.test.tsx
+PASS src/i18n/config.test.ts
+
+Test Suites: 3 passed, 3 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        31.823 s
+Ran all test suites within paths "src/components/timer/__tests__/SessionTimer.i18n.test.tsx", "src/components/timer/__tests__/SessionTimer.test.tsx", "src/i18n/config.test.ts".
+Test results written to: ../../support/vero-guardian-159/logs/focused-final.json
